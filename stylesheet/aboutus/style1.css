@@ -1,0 +1,16 @@
+#slogan p{
+    font-family: 'ZCOOL KuaiLe', cursive;
+    
+  }
+#slogan1 p{
+    font-family: 'Staatliches', cursive;
+    font:center;
+}
+#slogan2 h1{
+    background-color:lightgray;
+    
+}
+.center img{
+    position: relative;
+    
+}
