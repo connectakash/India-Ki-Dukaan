@@ -14,3 +14,9 @@
     position: relative;
     
 }
+td, th {
+    text-align: left;
+}
+td i {
+    text-align:center;
+}
