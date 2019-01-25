@@ -1,22 +1,40 @@
-#slogan p{
-    font-family: 'ZCOOL KuaiLe', cursive;
+div.gallery {
+    margin: 1px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 200px;
+  }
+  
+  div.gallery {
+    width: 100%;
+    height: auto;
+    color:white;
     
   }
-#slogan1 p{
-    font-family: 'Staatliches', cursive;
-    font:center;
-}
-#slogan2 h1{
-    background-color:lightgray;
+  
+  div.desc {
+    padding: 10px;
+    text-align: center;
+    color:white;
+    size: 50px;
+  }
+  body h1{
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 4px 4px 4px #aaa;
     
-}
-.center img{
-    position: relative;
-    
-}
-td, th {
-    text-align: left;
-}
-td i {
-    text-align:center;
-}
+  }
+  body p{
+    font-family: 'Berkshire Swash', cursive;
+
+  }
+  body p1{
+font-family: 'Aclonica', sans-serif;
+
+  }
+
+ body h3{
+  font-family: 'Permanent Marker', cursive;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 30px;
+}  
+  
