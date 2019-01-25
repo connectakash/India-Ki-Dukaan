@@ -1,22 +1,56 @@
 body{
-  padding-top: 70px;
+  padding-top: 50px;
+  
 }
 .thumb img{
     width: 20%;
 }
+
 .imgsize{
-    size: 10px;
+    /* size: 10px; */
+    height: 100%;
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
+}
+/* .imgsize:hover{
+  opacity: 0.7;
+} */
+.navbar-inverse{
+  background-color: #2c3e50;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: red;
+}
+.thumbnail{
+  /* background: #2c3e50; */
+}
+.img-rounded:hover{
+  box-shadow: 6px 9px 5px 0px rgba(0,0,0,0.75) !important;
+  opactiy:0.7;
+}
+.carousel-caption>h2{
+  color: white;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  /* background-color: #008CBA; */
+}
+.overlay:hover {
+  opacity: 1;
 }
 
-
-  
-  
- 
   
   .text {
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: white;
     font-size: 20px;
     position: absolute;
     top: 50%;
