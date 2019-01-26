@@ -18,8 +18,11 @@ button{
 body
  {
  	background: url("https://wallpaperplay.com/walls/full/b/8/8/117859.jpg") ;
- 	width:100%;
- 	height: 100vh;
+ 	/* width:100%;
+     height: 100vh; */
+     
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
  }
  .seller
 {
@@ -28,4 +31,10 @@ body
     color: aliceblue;
     text-align:center;
     padding-bottom: 40px;
+}
+#finalize{
+    color: white;
+}
+#terms label{
+ color: white;
 }
