@@ -1,0 +1,75 @@
+
+h1
+{
+    font-family: "Fredoka One";
+    padding:2px;
+    
+}
+.jumbotron
+{
+    text-align: center;
+    background: #d6e4eb;
+}
+
+.product-info>h5
+{
+    font-weight: bold;
+    font-family: "Special Elite";
+    text-align:center;
+
+}
+.product-info>h6
+{
+    font-weight: bold;
+    
+    font-family: "Special Elite";
+    text-align:center;
+
+}
+.product-cart
+{
+    text-align: center;
+    padding-bottom: 6px;
+}
+img{
+    max-width: 100%;
+    margin:2px 2px 2px 2px;
+    border-style: ridge; 
+    float: left;
+    border-block-start-style: double;
+    border-block-end-style: double;
+}
+.grid-box:hover img
+{
+    transform:scale(0.8);
+    transition: all 1s ease-in-out;
+    /* filter: brightness(0.5); */
+    
+}
+/*.grid-box:after
+{
+  position: absolute;
+  top:100%;
+  bottom:0;
+  left:0;
+  right: 0;
+  word-wrap:break-word;
+  overflow: hidden;
+  background-color: rgb(208, 218, 73);
+  color:black;
+  padding:4px;
+  opacity:0;
+  content:attr(data-text);
+  transition: 0.5s;
+
+}*/
+.grid-box:hover::after{
+    opacity:1;
+    top:0;
+}
+
+.grid-box
+{
+    display: inline-block;
+    margin: 2px;
+}

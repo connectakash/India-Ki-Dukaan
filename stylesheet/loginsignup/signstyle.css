@@ -35,7 +35,7 @@ body
  	border:0px solid white;
  	padding:30px 10px;
      margin: 2vh;
-     margin-top: 20%;
+     margin-top: 5%;
      -webkit-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
      -moz-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
      box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
@@ -44,4 +44,16 @@ body
  .container
  {
     color:white;
+ }
+ #icon
+ {
+     size: 5px;
+     width:70px;
+     height: 70px;
+     margin-top:-10px;
+     margin-left: 190px;
+     margin-bottom: 10px;
+ }
+ p{
+     color: black;
  }

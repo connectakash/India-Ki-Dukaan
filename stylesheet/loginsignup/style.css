@@ -1,9 +1,4 @@
-.jumbotron
-{
-    background: url("http://www.photoplato.com/photoplato/22464-background-desktop-wallpaper_57406.jpg");
-    font-family: coiny;
-    
-}
+
 .login
 {
     font-family: coiny;
@@ -32,7 +27,7 @@ body
  	border:0px solid white;
  	padding:30px 10px;
      margin: 2vh;
-     margin-top: 30%;
+     margin-top: 10%;
      -webkit-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
      -moz-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
      box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
@@ -43,4 +38,18 @@ body
  .input-container
  {
     color:white;
+ }
+ #icon
+ {
+     size: 5px;
+     width:70px;
+     height: 70px;
+     margin-top:-10pxpx;
+     margin-left: 155px;
+     text-align: absolute;
+     margin-bottom: 20px;
+ }
+ h6
+ {
+    color: white;
  }
