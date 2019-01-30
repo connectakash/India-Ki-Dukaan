@@ -40,8 +40,25 @@
     color: white;
   }  
   body{
-    background: url("http://www.ssangyongrexton.in/images/rexton-get-in-touch.jpg");
+    background: #e6eef2;
+    padding-top: 70px;
    }
-   h2{
+   h1{
      font-family: coiny;
    }
+   .contact-us__map {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    
+  }
+  .contact-us__map iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+  }
+  .container{
+    background: white;
+  }
