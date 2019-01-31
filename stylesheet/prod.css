@@ -1,0 +1,51 @@
+body
+{
+    background: #d6e4eb;
+}
+.container
+{
+    background: white;
+}
+h1
+{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom:50px;
+  
+}
+.h2text
+{
+    font-family: 'Acme';
+}
+
+.new
+{
+    color:rgb(143, 13, 13);
+    font-weight: 500;
+    font-size: 24px;
+    
+}
+.old
+{
+    color: #292727;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+.form-control, .form-control:hover:enabled {
+    color: inherit;
+    background-color: #fff;
+    box-shadow: none;
+}
+.desc
+{
+    text-align:right;
+}
+.spec
+{
+    text-align:left;
+}
+.spec:hover
+{
+    background: rgba(0,0,0,0.1);
+}
