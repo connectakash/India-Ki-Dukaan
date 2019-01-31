@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+html{
+	height: 100%;
+}
+.navbar{
+    padding: 1.35em 1.35em 1.5em 1.35em;
+    background: white;
+    
+    font-family: Raleway;
+    font-size: 1em;
+    text-decoration-color: black;
+    margin: 0 auto;
+    min-height: 5em;
+    
+    
+	
+}
+.container-fluid{
+	padding: auto;
+	width: 100%;
+	height: 100%;
+}
+.navbar .navbar-inverse  .navbar-fixed-top ul li a{
+    color: black;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+ 
+
+
+
+
+/* circle on nav */
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 1.7em;
+    left: 50%;
+    width: 3.125em;
+    height: 3.125em;
+    border: 4px solid red;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+div.circleBehind a:after
+{
+    border-width: 0.125em;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+.search-btn{
+height: 2.6875em;
+width: 6.25em;
+background: #D10024;
+color: #FFF;
+font-weight: 700;
+border: 2px solid black;
+border-radius: 0px 40px 40px 0px;
+}
+
+.input{
+width: calc(100%-200px);
+margin-right: -0.27em;
+margin-top: 0.5em;
+height: 2.6875em;
+
+border: 2px solid;
+background-color: #FFF;
+font-family: inherit;
+font-size: inherit;
+/*line-height: inherit;*/
+border-radius: 40px 0 0px 40px;
+}
+
+.section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#footer {
+  background: #15161D;
+  color: #B9BABC;
+}
+
+#bottom-footer {
+  background: #1E1F29;
+}
+
+.footer {
+  margin: 30px 0px;
+}
+
+.footer .footer-title {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0px 0px 30px;
+}
+
+.footer-links li+li {
+  margin-top: 15px;
+}
+
+.footer-links li a {
+  color: #B9BABC;
+}
+
+.footer-links li i {
+  margin-right: 15px;
+  color: #D10024;
+  width: 14px;
+  text-align: center;
+}
+
+.footer-links li a:hover {
+  color: #D10024;
+}
+
+.copyright {
+  margin-top: 30px;
+  display: block;
+  font-size: 12px;
+}
+
+.footer-payments li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.footer-payments li a {
+  color: #15161D;
+  font-size: 36px;
+  display: block;
+}
+

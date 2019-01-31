@@ -1,0 +1,52 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+html{
+	height: 100%;
+}
+.navbar{
+    padding: 1.35em 1.35em 1.5em 1.35em;
+    background: white;
+    
+    font-family: Raleway;
+    font-size: 1em;
+    text-decoration-color: black;
+    margin: 0 auto;
+    min-height: 5em;
+    
+    
+	
+}
+.container-fluid{
+	padding: auto;
+	width: 100%;
+	height: 100%;
+}
+.navbar .navbar-inverse  .navbar-fixed-top ul li a{
+    color: black;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .search-btn{
+height: 3.05em;
+width: 6.25em;
+background: #D10024;
+color: #FFF;
+font-weight: 700;
+border: 2px solid black;
+border-radius: 0px 40px 40px 0px;
+}
+.input{
+/*width: 25em;*/
+margin-right: -0.27em;
+height: 2.6875em;
+/*padding: 1.32em 1.32em 1.32em;*/
+border: 2px solid;
+background-color: #FFF;
+font-family: inherit;
+font-size: inherit;
+/*line-height: inherit;*/
+border-radius: 40px 0 0px 40px;
+}
