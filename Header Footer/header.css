@@ -30,7 +30,7 @@ img {
     width: 100%;
   }
   .search-btn{
-height: 3.05em;
+height: 2.5em;
 width: 6.25em;
 background: #D10024;
 color: #FFF;
@@ -41,7 +41,8 @@ border-radius: 0px 40px 40px 0px;
 .input{
 /*width: 25em;*/
 margin-right: -0.27em;
-height: 2.6875em;
+/* height: 2.6875em; */
+height: 2.5em;
 /*padding: 1.32em 1.32em 1.32em;*/
 border: 2px solid;
 background-color: #FFF;
