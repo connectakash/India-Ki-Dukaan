@@ -20,32 +20,32 @@
        
         <div class="container">
           <div class="row">
-              <div class="col-md-4 col-sm-4 col-xs-3"></div>
-              <div class="col-md-6 col-sm-6 col-xs-12"> 
-              <form class="form-container">
-                  <br>
+              <div class="col-md-3 col-sm-3 col-xs-3"></div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                  <br><br>
                 <h2 class="AddAddress">Add a new Address</h2>
-                <br>
+                   <br><br>
+            <form class="form-container">
                 <br>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">Full Name</label>
                     <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder=" Name" required>
                 </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputEmail1 required">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-               </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                </div>
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Atleast 6 characters" required>
-               </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                </div>
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">Phone No</label>
                     <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="10-digit mobile number without prefixes" required>
                     <small class="form-text text-muted">May be used to assist delivery.</small>
-               </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                </div>
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputpincode required">Pincode</label>
                     <input type="text" class="form-control" id="examplepincode" aria-describedby="Pincode" placeholder="6 digits[0-9] pincode" required>
                     <small class="form-text text-muted">May be used to assist delivery.</small>
@@ -55,44 +55,52 @@
                     <input type="text" class="form-control" id="examplepAddress" aria-describedby="Address" placeholder="Flat / House NO / Floor / Building" required><br>
                     <input type="text" class="form-control" id="examplepAddress" aria-describedby="Address" placeholder="Colony / Street / Locality" required>
                 </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">Landmark</label>
                     <input type="text" class="form-control" id="exampleLandmark" aria-describedby="Landmark" placeholder="E.g near Apollo Hospital, etc" required>
-               </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                </div>
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">City</label>
                     <input type="text" class="form-control" id="exampleCity" aria-describedby="City" placeholder="City" required>
-               </div>
-               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                </div>
+                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">State</label><br>
-                    <!-- <input type="text" class="form-control" id="exampleState" aria-describedby="State" placeholder="State" required> -->
-                    <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </div>
-               </div>
-              
-              
-               <button type="submit" class="btn btn-primary">Submit</button>
+                    <select>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Tamilnadu">Tamilnadu</option>
+                        <option value="Uttarpradesh">Uttarpradesh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Gujurat">Gujurat</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+                   <button type="submit" class="btn btn-primary">Submit</button><br><br>
 
-             </form>
+            </form>
             </div>
           <div class="col-md-4 col-sm-4 col-xs-3"></div>
-         </div>
         </div>
+    </div><br><br>
      
     
 </body>
 <style>
         h2
-            {padding-left:80px;}
+            {padding-left:130px;
+            font-family: "Acme"}
         body
-            {background: #d6e4eb;}    
+            {background: #d6e4eb;}
+        .form-container
+            {background: white;
+                -webkit-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
+                box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);}  
+        .btn
+            {margin-left:20px;}  
+        option
+             {padding:5px 5px 5px 5px;}    
+              
     </style>
 </html>
