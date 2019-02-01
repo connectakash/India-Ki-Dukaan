@@ -1,0 +1,21 @@
+body
+{
+    background:  #d6e4eb;
+}
+.cards
+{
+    border:1px solid gray;
+    padding:5px 5px 5px 5px; 
+}
+.cards
+{
+    background: white;
+    padding: 15px 15px 15px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.date{
+    text-align: right;
+    margin-right: 100px;
+    padding-top:0px;
+}

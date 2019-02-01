@@ -1,0 +1,33 @@
+.box
+{
+    border: 1px solid grey;
+    padding-left:8px;
+    padding-right: 8px;
+    padding-top: 10px;
+}
+h2
+{
+    font-family: "Acme";
+}
+.btn
+{
+    float: right;
+    margin-bottom: 15px;
+}
+.textpad{
+    padding-left: 15px;
+}
+.btn-btn
+{
+    float: left;
+    margin-left: 290px;
+    margin-top: 10px;
+}
+body
+{
+    background:  #d6e4eb;
+}
+.box
+{
+    background: white;
+}
