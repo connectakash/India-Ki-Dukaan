@@ -2,6 +2,15 @@ body
 {
     background:  #d6e4eb;
 }
+h2,h4
+{
+    font-family: "Acme";
+    padding-left:15px;
+}
+h6
+{
+    padding-left:15px;
+}
 .cards
 {
     border:1px solid gray;
