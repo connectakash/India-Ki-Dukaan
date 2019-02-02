@@ -14,7 +14,7 @@
 <body>
     
 
-
+        <!--Nav Bar when not logged in-->
 
         <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">India-ki-Dukaan</a>
@@ -28,7 +28,7 @@
                       <a class="nav-link" href="#"><strong>Home</strong> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#"><strong>Categories</strong></a>
+                      <a class="nav-link" href="index.html#categories"><strong>Categories</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><strong>Contact Us</strong></a>
@@ -50,16 +50,118 @@
                     <!-- <li class="nav-item">
                       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li> -->
+                    <form class="header-search">
+                            <input class="input" placeholder="Search here">
+                            <button class="search-btn">Search</button>
+                        </form>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
+                  <!-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                  </form> -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item-dropdown">
+                            <a class="nav-link dropdown-toggle"  href="#" style="color:black" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-user-plus"></span><strong> SignUp</strong>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">User SignUp</a>
+                                    <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                                    <!-- <div class="dropdown-divider"></div> -->
+                                    <a class="dropdown-item" href="#">Seller SignUp</a>
+                            </div>
+                        </li>
+                        <!-- <li> &nbsp&nbsp  </li> -->
+                        <li class="nav-item-dropdown">
+                                <a class="nav-link dropdown-toggle"  href="#" style="color:black" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-sign-in"></span><strong> Login</strong>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">User Login</a>
+                                        <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                                        <!-- <div class="dropdown-divider"></div> -->
+                                        <a class="dropdown-item" href="#">Seller Login</a>
+                                </div>
+                        </li>
+                    </ul> 
+                  
                 </div>
               </nav>
+<br><br><br>
+            <!--nav bar after login-->
 
+              <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">India-ki-Dukaan</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="index.html#categories"><strong>Categories</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><strong>Contact Us</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><strong>About Us</strong></a>
+                         </li>
+                        <!-- <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li> -->
+                        <form class="header-search">
+                                <input class="input" placeholder="Search here">
+                                <button class="search-btn">Search</button>
+                            </form>
+                      </ul>
+                      <!-- <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form> -->
+    
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item-dropdown">
+                                <a class="nav-link dropdown-toggle"  href="#" style="color:black" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-user-circle-o"></span><strong> Hello User </strong>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Dashboard</a>
+                                        <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                                        <!-- <div class="dropdown-divider"></div> -->
+                                        <a class="dropdown-item" href="#">Logout</a>
+                                </div>
+                            </li>
+                            <!-- <li> &nbsp&nbsp  </li> -->
+                            <li style="padding-top: 8px;">
+                                    <a href="index.html" style="color:black" >
+                                        <span class="fa fa-shopping-cart"></span><strong>Cart</strong>
+                                    </a>
+                                    
+                            </li>
+                        </ul> 
+                      
+                    </div>
+                  </nav>
 
+<br><br>
 
+<!--Footer-->
 
         <div class="footer">
                 <div class="container-fluid">
@@ -95,21 +197,21 @@
                                                 <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
                                             </div>
                                             <div class="footer-links__content" data-collapse-content="">
-                                                <ul class="footer-links__list">
-                                                    <li class="footer-links__item">
+                                                <ul class="footer-aboutus__contacts">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">About Us</a>
                                                     </li>
-                                                    <li class="footer-links__item">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">Delivery Information</a>
                                                     </li>
                                                     
-                                                    <li class="footer-links__item">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">Contact Us</a>
                                                     </li>
-                                                    <li class="footer-links__item">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">Returns</a>
                                                     </li>
-                                                    <li class="footer-links__item">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">Site Map</a>
                                                     </li>
                                                 </ul>
@@ -123,14 +225,14 @@
                                                 <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
                                             </div>
                                             <div class="footer-links__content" data-collapse-content="">
-                                                <ul class="footer-links__list">
-                                                    <li class="footer-links__item">
+                                                <ul class="footer-aboutus__contacts">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">My Account</a>
                                                     </li>
-                                                    <li class="footer-links__item">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">Order History</a>
                                                     </li>
-                                                    <li class="footer-links__item">
+                                                    <li class="footer-aboutus__contacts-item">
                                                         <a class="footer-links__link" href="">Wish List</a>
                                                     </li>
                                                 </ul>
@@ -185,6 +287,33 @@
             
 </body>
 <style>
+/* header css */
+.search-btn{
+height: 2.5em;
+width: 6.25em;
+background: #D10024;
+background: #007bff;
+color: #FFF;
+font-weight: 700;
+border: 2px solid black;
+border-radius: 0px 40px 40px 0px;
+}
+.input{
+/*width: 25em;*/
+margin-right: -0.27em;
+/* height: 2.6875em; */
+height: 2.5em;
+/*padding: 1.32em 1.32em 1.32em;*/
+border: 2px solid;
+background-color: #FFF;
+font-family: inherit;
+font-size: inherit;
+/*line-height: inherit;*/
+border-radius: 40px 0 0px 40px;
+}
+
+
+
 .footer__widgets {
 		border-top: 1px solid #cfdee6;
 		border-bottom: 1px solid #cfdee6;
@@ -257,6 +386,65 @@
 }
 .navbar{
     background-color:  #d6e4eb;
+}
+.footer-links__item {
+  list-style-type: none;
+}
+/* .footer-links__header{
+    text-align: center;
+    padding-left: 20px;
+} */
+ul {
+    text-align: left;
+    list-style-position: left;
+    list-style: none;
+}
+
+
+.footer-aboutus__title {
+	margin-bottom: 28px
+}
+.footer-aboutus__text {
+	color: #676f73;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 15px;
+	padding-right: 30px
+}
+.footer-aboutus__contacts {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+.footer-aboutus__contacts-item {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 4px 0
+}
+.footer-aboutus__contacts-item a {
+	color: inherit;
+	transition: color .15s
+}
+.footer-aboutus__contacts-item a:hover {
+	color: #f26924
+}
+.footer-aboutus__contacts-item a, .footer-aboutus__contacts-item a:hover {
+	text-decoration: none
+}
+.copyright {
+	height: 60px;
+	font-size: 13px;
+	line-height: 60px
+}
+.copyright a {
+	color: #676f73;
+	transition: color .15s
+}
+.copyright a:hover {
+	color: #f26924
+}
+.copyright a, .copyright a:hover {
+	text-decoration: none
 }
 
 </style>
