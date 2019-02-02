@@ -1,0 +1,30 @@
+.addaddress_border{
+    border: 2px dotted gray;
+    color:gray;
+
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 70px;
+    background: white;
+}
+a{
+    color: gray;
+}
+.address_border{
+    border: 2px solid gray;
+    background: white;
+    
+    
+}
+h3{
+    font-family: "Acme";
+    text-align: center;
+}
+body{
+    padding-top: 50px;
+    background: #d6e4eb;
+}
+.row{
+    /* padding-left: 20px; */
+    margin-left: 70px;
+}

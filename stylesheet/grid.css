@@ -1,7 +1,10 @@
-
+body
+{
+    background: #d6e4eb;
+}
 h1
 {
-    font-family: "Fredoka One";
+    font-family: "Acme";
     padding:2px;
     
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY CART</title>
+    <link rel="stylesheet" href="stylesheet/cart/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet/cart/style.css">
+    <script src="js/cart/bootstrap.min.js"></script>
+    <script src="js/cart/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <script src="js/cart/angularjs.min.js"></script>
+    <script src="js/cart/module.js"></script>
+    <div class="container" ng-app="myCart" ng-controller="myCartCtrl">
+        <h2 class="text-center ">Shopping Cart</h2>
+        <div class="row">
+            <h4>MY CART ({{cartItemsCount}})</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row" ng-repeat="item in cartItems">
+                    <div class="col-sm-6">
+                        <img src="images/cart/{{item.itemImg}}" alt="{{itemAlt}}" class="item-img">
+                    </div>
+                    <div class="col-sm-6">
+                        <p>{{item.itemName}}</p>
+                        <p>{{item.itemPrice}} INR</p>
+                        <p>Quantity {{item.itemQty}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <p>PRICE DETAILS</p>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-8">
+                         <p>Price ({{cartItemsCount}} item)</p>
+                         <p>Delivery Charges</p>
+                         <p>Amount Payable</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>{{total}} INR</p>
+                        <p>{{dCharges}} INR</p>
+                        <p>{{amtPay}} INR</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

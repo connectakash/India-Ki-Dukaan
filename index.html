@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -15,8 +13,87 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheet/indexpage/style.css">
 
+    
+
 </head>
 <body>
+
+
+
+  <!--Nav Bar when not logged in-->
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html">India-ki-Dukaan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#categories"><strong>Categories</strong></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="contactus.html"><strong>Contact Us</strong></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="about.html"><strong>About Us</strong></a>
+           </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+          <form class="header-search">
+                  <input class="input" placeholder="  Search here">
+                  <button class="search-btn">Search</button>
+              </form>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+
+          <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item-dropdown">
+                  <a class="nav-link dropdown-toggle"  href="#" style="color:black" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="fa fa-user-plus"></span><strong> SignUp</strong>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="signup.html">User SignUp</a>
+                          <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                          <!-- <div class="dropdown-divider"></div> -->
+                          <a class="dropdown-item" href="sellersignup.html">Seller SignUp</a>
+                  </div>
+              </li>
+              <!-- <li> &nbsp&nbsp  </li> -->
+              <li class="nav-item-dropdown">
+                      <a class="nav-link dropdown-toggle"  href="#" style="color:black" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-sign-in"></span><strong> Login</strong>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="login.html">User Login</a>
+                              <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                              <!-- <div class="dropdown-divider"></div> -->
+                              <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
+                      </div>
+              </li>
+          </ul> 
+        
+      </div>
+    </nav>
 
     
 
@@ -100,7 +177,7 @@
 
 
   <br><br>
-  <h2 style="text-align: center;"><strong>Categories</strong></h2>
+  <h2 id="categories" style="text-align: center;"><strong>Categories</strong></h2>
   <br><br>
 
   <div class="container">
@@ -146,25 +223,317 @@
         </div>
       </div>
       <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-        <div class="catback">
+        <a href="grid.html"><div class="catback">
           <img src="images/indexpage/cat6.png" alt="">
           <br><br>
           <h5 style="text-align: center;"><strong>Handloom</strong></h5>
           <br>
-        </div>
+        </div></a>
       </div>
     </div>
     <br><br>
   </div>
 
+
+
+
+
+  <!--Footer-->
+
+  <div class="footer">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col">
+                  <div class="footer__widgets">
+                      <div class="row justify-content-between">
+                          <div class="col-12 col-lg-4 col-sm-6 footer__aboutus">
+                              <div class="footer-aboutus">
+                                  <div class="footer-aboutus__title">
+                                      <h4 class="footer-aboutus__header decor-header">About Us</h4>
+                                  </div>
+                                  <div class="footer-aboutus__text">
+                                      Providing the best and pure Quality of Indian products
+                                  </div>
+                                  <ul class="footer-aboutus__contacts">
+                                      <li class="footer-aboutus__contacts-item">
+                                          <a href="contactus.html">NIIT Vijaynagar, Bengakuru</a>
+                                      </li>
+                                      <li class="footer-aboutus__contacts-item">
+                                          <a href="contactus.html">info@indiakidukaan.co.in</a>
+                                      </li>
+                                      <li class="footer-aboutus__contacts-item">
+                                          <a href="contactus.html">+91-1234567890</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-12 col-lg-2 col-sm-6 col-md-3">
+                              <div class="footer-links" data-collapse="" data-collapse-item="" data-collapse-opened-class="footer-links--opened">
+                                  <div class="footer-links__title">
+                                      <h4 class="footer-links__header" data-collapse-trigger="">Information <svg class="footer-links__header-arrow" height="6px" width="9px">
+                                      <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
+                                  </div>
+                                  <div class="footer-links__content" data-collapse-content="">
+                                      <ul class="footer-aboutus__contacts">
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="about.html">About Us</a>
+                                          </li>
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="">Delivery Information</a>
+                                          </li>
+                                          
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="contactus.html">Contact Us</a>
+                                          </li>
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="">Returns</a>
+                                          </li>
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="">Site Map</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-12 col-lg-2 col-sm-6 col-md-3">
+                              <div class="footer-links" data-collapse="" data-collapse-item="" data-collapse-opened-class="footer-links--opened">
+                                  <div class="footer-links__title">
+                                      <h4 class="footer-links__header" data-collapse-trigger="">My Account <svg class="footer-links__header-arrow" height="6px" width="9px">
+                                      <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
+                                  </div>
+                                  <div class="footer-links__content" data-collapse-content="">
+                                      <ul class="footer-aboutus__contacts">
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="">My Account</a>
+                                          </li>
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="">Order History</a>
+                                          </li>
+                                          <li class="footer-aboutus__contacts-item">
+                                              <a class="footer-links__link" href="">Wish List</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-12 col-lg-4 footer__followus">
+                              <div class="footer-followus">
+                                  <div class="footer-followus__title">
+                                      <h4 class="footer-followus__header">Follow Us</h4>
+                                  </div>
+                                  <div class="footer-followus__text">
+                                      Follow us on social Media
+                                  </div>
+                                  <form class="footer-followus__subscribe-form">
+                                      <input class="form-control form-control--footer" placeholder="Email address" type="email"> <button class="btn btn-primary" type="submit">Subscribe</button>
+                                  </form>
+                                  <ul class="footer-followus__social-links">
+                                      <li class="footer-followus__social-link">
+                                          <a href="#" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                                      </li>
+                                      <li class="footer-followus__social-link">
+                                          <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                      </li>
+                                      <li class="footer-followus__social-link">
+                                          <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                                      </li>
+                                      <li class="footer-followus__social-link">
+                                          <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                      </li>
+                                      <li class="footer-followus__social-link">
+                                          <a href="#" target="_blank"><i class="fa fa-rss"></i></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-between">
+              <div class="col-12 col-sm-auto">
+                  <div class="copyright">
+                      <a href="">India-ki-Dukaan</a> by <a href="">NIIT</a>
+                  </div>
+              </div>
+              <div class="footer__payments col-auto"><img alt="payment image" src="images/indexpage/payments.png" srcset="images/indexpage/payments.png, images/indexpage/payments@2x.png 2x"></div>
+          </div><br>
+      </div>
+      
+  </div>
+
 </body>
 <style>
+  h5:hover
+  {
+    color:#f26924;
+  }
 h2{
   
   text-decoration: underline;
   text-decoration-color: #ffd599;
   /* margin-bottom: 30px solid #ffd599 !important; */
 
+}
+
+/* header css */
+.search-btn{
+height: 2.5em;
+width: 6.25em;
+background: #D10024;
+background: #007bff;
+color: #FFF;
+font-weight: 700;
+border: 2px solid black;
+border-radius: 0px 40px 40px 0px;
+}
+.input{
+/*width: 25em;*/
+margin-right: -0.27em;
+/* height: 2.6875em; */
+height: 2.5em;
+/*padding: 1.32em 1.32em 1.32em;*/
+border: 2px solid;
+background-color: #FFF;
+font-family: inherit;
+font-size: inherit;
+/*line-height: inherit;*/
+border-radius: 40px 0 0px 40px;
+}
+
+
+
+.footer__widgets {
+		border-top: 1px solid #cfdee6;
+		border-bottom: 1px solid #cfdee6;
+		padding-bottom: 50px;
+		padding-top: 50px
+    }
+    .footer-followus__title {
+	margin-bottom: 28px
+}
+.footer-followus__header {
+	position: relative;
+	z-index: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	margin: 0
+}
+.footer-followus__header:after {
+	content: "";
+	display: block;
+	height: 2px;
+	background-color: #ffd599;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1
+}
+.footer-followus__text {
+	color: #676f73;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 15px
+}
+.footer-followus__subscribe-form {
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 15px
+}
+.footer-followus__subscribe-form .btn {
+	margin-left: 6px
+}
+.footer-followus__social-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -ms-flexbox;
+	display: flex
+}
+.footer-followus__social-link a {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	margin-right: 5px;
+	font-size: 16px;
+	border-radius: 1.5px;
+	background: transparent;
+	color: #676f73
+}
+.footer-followus__social-link a:hover {
+	color: #676f73;
+	background: #cfdee5;
+	text-decoration: none
+}
+.container-fluid{
+    background: #d6e4eb;;
+}
+.navbar{
+    background-color:  #d6e4eb;
+}
+.footer-links__item {
+  list-style-type: none;
+}
+/* .footer-links__header{
+    text-align: center;
+    padding-left: 20px;
+} */
+ul {
+    text-align: left;
+    list-style-position: left;
+    list-style: none;
+}
+
+
+.footer-aboutus__title {
+	margin-bottom: 28px
+}
+.footer-aboutus__text {
+	color: #676f73;
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 15px;
+	padding-right: 30px
+}
+.footer-aboutus__contacts {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+.footer-aboutus__contacts-item {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 4px 0
+}
+.footer-aboutus__contacts-item a {
+	color: inherit;
+	transition: color .15s
+}
+.footer-aboutus__contacts-item a:hover {
+	color: #f26924
+}
+.footer-aboutus__contacts-item a, .footer-aboutus__contacts-item a:hover {
+	text-decoration: none
+}
+.copyright {
+	height: 60px;
+	font-size: 13px;
+	line-height: 60px
+}
+.copyright a {
+	color: #676f73;
+	transition: color .15s
+}
+.copyright a:hover {
+	color: #f26924
+}
+.copyright a, .copyright a:hover {
+	text-decoration: none
 }
 </style>
 </html>
