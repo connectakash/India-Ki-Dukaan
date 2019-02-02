@@ -58,10 +58,10 @@ body {
   }
 
   div.gallery {
-    margin: 5px;
+    margin: 3px;
     border: 1px solid #ccc;
     float: left;
-    width: 170px;
+    width: 150px;
   }
   
    div.gallery img {
@@ -74,7 +74,7 @@ body {
   }
   
   div.desc {
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     font-size: 20px;
   }
