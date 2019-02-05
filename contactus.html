@@ -5,66 +5,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet"> 
     <title>Contact us </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylesheet/contactus/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheet/contactus/all.min.css">
-    <link rel="stylesheet" href="stylesheet/contactus/style.css">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="stylesheet/contactus/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet/contactus/all.min.css"> -->
+    <link rel="stylesheet" href="./stylesheet/contactus/style.css">
 </head>
 
 <body>
 
-        <h1 class="text-center">Contact Us</h2><hr>  
+        <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="index.html"><img src="./images/logo/logo.png" width="150" height="100" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                         </button>  
+                        
+             <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
+                
+                <ul class="navbar navbar-nav" >
+                   
+                        <a class="nav-item nav-link" href="index.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
+                    
+                    
+                        <a class="nav-item nav-link" href="index.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
+                    
+                   
+                        <a class="nav-item nav-link" href="contactus.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
+                    
+                    
+                        <a class="nav-item nav-link" href="about.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
+                    
+                        <form class="header-search">
+                                <input class="input" placeholder="  Search here">
+                                <button class="search-btn">Search</button>
+                        </form>
+                       
+                    
+                </ul>
+                <!-- <div class="circleBehind blue" id="navbarSupportedContent"></div> </div> -->
+                
+                <ul class="navbar navbar-nav navbar-right">
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-user-plus"></span><strong> SignUp</strong>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                        <a class="dropdown-item" href="signup.html">User SignUp</a>
+                                     
+                                        <a class="dropdown-item" href="sellersignup.html">Seller SignUp</a>
+                                </div>
+                        </li>
+        
+                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="fa fa-sign-in"></span><strong> Login</strong>
+                                    </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                                <a class="dropdown-item" href="login.html">User Login</a>
+                                                <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
+                                        </div>
+                        </li>  
+                </ul> 
+                
+            </div>
+          
+        </nav>
+
+
+
+        <h1 class="text-center">Contact Us</h2><hr  class="trans--grow hr">  
   <div class="container">       
     
         <div class="contact-us__map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.0489327654755!2d77.53498110765686!3d12.968720700050413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd5400ac1d9e0a9a!2sNIIT+Bangalore+Vijayanagar+Centre!5e0!3m2!1sen!2sin!4v1548827883463" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div></div>  
-        <br><br>
-    <div class="container">
-        <br>
-        <div class="row">
-            <div class="col-sm-7">
-                <div class="form-group">
-                        <label>User name</label>
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+       <div class="formClass"> <form class="needs-validation" novalidate>
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationTooltip01">First name</label>
+                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationTooltip02">Last name</label>
+                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationTooltipUsername">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                      <div class="invalid-tooltip">
+                        Please choose a unique and valid username.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group">
-                        <label> E-Mail</label>
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">City</label>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationTooltip04">State</label>
+                    <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationTooltip05">Zip</label>
+                    <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group">
-                        <label>Phone Number</label>
-                    
-                    <input class="form-control" id="phone" name="phone" placeholder="Phone" type="number" required>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>
                 </div>
-                <div class="form-group">
-                        <label>Message</label>
-                    
-                    <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            <br>
-            <div class="col-sm-5">
-                <h3 class="h3-pad">Get in Touch</h3>
-                <p>NIIT Bangalore Vijayanagar Centre</p>
-                <p><i class="fas fa-map-marker-alt"></i> &nbsp;Door No. 2934/E,2935/E, 4th Floor, Rangalakshmi Golden Arcade, Magadi</p>
-                <p><i class="fas fa-map-marker-alt"></i> &nbsp;Chord Road, Above Mc Donald’s, Vijaya Nagar, Hosahalli Extension, Vijaya</p>
-                <p>Nagar, Bengaluru, Karnataka 560040</p>
-                <p><i class="fas fa-envelope"></i> &nbsp; info@niit.com</p>
-                <p><i class="fas fa-phone-square"></i> &nbsp;080 2338 1833</p>
-                <a href="#" class="fab fa-facebook"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-google-plus"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-youtube"></a>
-                
-            </div>
-        </div>
-        <br><br>
     </div>
     <!-- <div class="contact-us__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.0489327654755!2d77.53498110765686!3d12.968720700050413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd5400ac1d9e0a9a!2sNIIT+Bangalore+Vijayanagar+Centre!5e0!3m2!1sen!2sin!4v1548827883463" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>        
@@ -72,7 +147,130 @@
         
         
         
-        </div>-->
+<!--Footer-->
+
+<div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="footer__widgets">
+                                <div class="row justify-content-between">
+                                    <div class="col-12 col-lg-4 col-sm-6 footer__aboutus">
+                                        <div class="footer-aboutus">
+                                            <div class="footer-aboutus__title">
+                                                <h4 class="footer-aboutus__header decor-header">About Us</h4>
+                                            </div>
+                                            <div class="footer-aboutus__text">
+                                                Providing the best and pure Quality of Indian products
+                                            </div>
+                                            <ul class="footer-aboutus__contacts">
+                                                <li class="footer-aboutus__contacts-item">
+                                                    <a href="contactus.html">NIIT Vijaynagar, Bengakuru</a>
+                                                </li>
+                                                <li class="footer-aboutus__contacts-item">
+                                                    <a href="contactus.html">info@indiakidukaan.co.in</a>
+                                                </li>
+                                                <li class="footer-aboutus__contacts-item">
+                                                    <a href="contactus.html">+91-1234567890</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-2 col-sm-6 col-md-3">
+                                        <div class="footer-links" data-collapse="" data-collapse-item="" data-collapse-opened-class="footer-links--opened">
+                                            <div class="footer-links__title">
+                                                <h4 class="footer-links__header" data-collapse-trigger="">Information <svg class="footer-links__header-arrow" height="6px" width="9px">
+                                                <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
+                                            </div>
+                                            <div class="footer-links__content" data-collapse-content="">
+                                                <ul class="footer-aboutus__contacts">
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="about.html">About Us</a>
+                                                    </li>
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="">Delivery Information</a>
+                                                    </li>
+                                                    
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="contactus.html">Contact Us</a>
+                                                    </li>
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="">Returns</a>
+                                                    </li>
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="">Site Map</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-2 col-sm-6 col-md-3">
+                                        <div class="footer-links" data-collapse="" data-collapse-item="" data-collapse-opened-class="footer-links--opened">
+                                            <div class="footer-links__title">
+                                                <h4 class="footer-links__header" data-collapse-trigger="">My Account <svg class="footer-links__header-arrow" height="6px" width="9px">
+                                                <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
+                                            </div>
+                                            <div class="footer-links__content" data-collapse-content="">
+                                                <ul class="footer-aboutus__contacts">
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="">My Account</a>
+                                                    </li>
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="">Order History</a>
+                                                    </li>
+                                                    <li class="footer-aboutus__contacts-item">
+                                                        <a class="footer-links__link" href="">Wish List</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-4 footer__followus">
+                                        <div class="footer-followus">
+                                            <div class="footer-followus__title">
+                                                <h4 class="footer-followus__header">Follow Us</h4>
+                                            </div>
+                                            <div class="footer-followus__text">
+                                                Follow us on social Media
+                                            </div>
+                                            <form class="footer-followus__subscribe-form">
+                                                <input class="form-control form-control--footer" placeholder="Email address" type="email"> <button class="btn btn-primary" type="submit">Subscribe</button>
+                                            </form>
+                                            <ul class="footer-followus__social-links">
+                                                <li class="footer-followus__social-link">
+                                                    <a href="#" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                                                </li>
+                                                <li class="footer-followus__social-link">
+                                                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                                <li class="footer-followus__social-link">
+                                                    <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                                                </li>
+                                                <li class="footer-followus__social-link">
+                                                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                                </li>
+                                                <li class="footer-followus__social-link">
+                                                    <a href="#" target="_blank"><i class="fa fa-rss"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-sm-auto">
+                            <div class="copyright">
+                                <a href="">India-ki-Dukaan</a> by <a href="">NIIT</a>
+                            </div>
+                        </div>
+                        <div class="footer__payments col-auto"><img alt="payment image" src="images/indexpage/payments.png" srcset="images/indexpage/payments.png, images/indexpage/payments@2x.png 2x"></div>
+                    </div><br>
+                </div>
+                
+            </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
     </body>
 
 </html>

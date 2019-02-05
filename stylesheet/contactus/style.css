@@ -1,51 +1,120 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+body{
+background-color: white;
+font-family: Raleway;
+}
+.navbar {	
+  
+  background-color: black;	
+	font-family: Raleway;
+    font-size: 1em;
+    margin: 0 auto;
+    min-height: 5em;
+}
+.navbar a
+{
+  color:white;
+} 
+.navbar a:hover
+{
+		color:rgb(214, 63, 63);
+} 
+
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+	position: absolute;
+	background: black;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    
+    text-decoration: none;
+    background-color: black;
+}
+.search-btn{
+height: 2.5em;
+width: 6.25em;
+background: #D10024;
+background: red;
+color: #FFF;
+font-weight: 700;
+border: 2px solid white;
+border-radius: 0px 40px 40px 0px;
+}
+.input{
+margin-right: -0.27em;
+height: 2.5em;
+border: 2px solid white;
+background-color: #FFF;
+font-family: inherit;
+font-size: inherit;
+border-radius: 40px 0 0px 40px;
+}
+
+h2{
+  font-family: Raleway;
+  text-decoration: underline;
+    text-decoration-color: currentcolor;
+    text-decoration-color: rgb(214, 63, 63);
+}
+
+h1{
+  font-family: Raleway;
+  color: rgb(214, 63, 63);
+  
+}
+rans--grow{
+  -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+  transition: width 1s  ease-out;
+  width : 0%;
+}
+.grow{
+  width:100%;
+}
+
+hr{
+  margin-top: 2px;
+  padding: 2px 0;
+  border: none;
+  background-color:black;
+  letter-spacing: 2px;
+  width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+.formClass{
+  padding: 10px 3.2em 5em 3.2em;
+}
+.phone-number .col-xs-3::after{
+  content: "-";
+  position:absolute;
+     right: 5px;
+     color: black;
+     border: 0px solid;
+     top: 5px;
+ }
+ 
+ .phone-number .col-xs-4{
+   width:25%;
+ }
+ 
+ .phone-number .col-xs-3, .phone-number .col-xs-4{
+ 
+   padding-left:0;
+ }
+
 .h3-pad {
  margin-top: 0px;
 }
-.fab {
-    padding: 5px;
-    font-size: 19px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-google-plus {
-    background: #dd4b39;
-    color: white;
-  }
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }  
-  body{
-    background: #e6eef2;
-    padding-top: 70px;
-   }
-   h1{
-     font-family: coiny;
-   }
 
   .container{
     background: white;
@@ -63,3 +132,161 @@
     width: 100%;
     height: 100%
   }
+
+  /* footer */
+h5:hover
+{
+  color:rgb(214, 63, 63);
+}
+h4{
+  color: rgb(214, 63, 63);
+
+  
+}
+.footer .row{
+  background: black;
+}
+
+.footer__widgets {
+	  border-top: 1px solid #cfdee6;
+	  border-bottom: 1px solid #cfdee6;
+	  padding-bottom: 50px;
+    padding-top: 50px
+   
+  }
+  .footer-followus__title {
+  margin-bottom: 28px
+}
+.footer-followus__header {
+  position: relative;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0
+}
+.footer-followus__header:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #ffd599;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1
+}
+.footer-followus__text {
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px
+}
+.footer-followus__subscribe-form {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px
+}
+.footer-followus__subscribe-form .btn {
+  margin-left: 6px
+  
+}
+.footer-followus__social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color:rgb(214, 63, 63);
+  border-color: rgb(214, 63, 63);
+}
+.footer-followus__social-link a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+  font-size: 16px;
+  border-radius: 1.5px;
+  background: transparent;
+  color: white;
+}
+.footer-followus__social-link a:hover {
+  color: rgb(214, 63, 63);
+  background: none;
+  text-decoration: none
+}
+.container-fluid{
+  background: #d6e4eb;;
+}
+
+.footer-links__item {
+list-style-type: none;
+}
+/* .footer-links__header{
+  text-align: center;
+  padding-left: 20px;
+} */
+ul {
+  text-align: left;
+  list-style-position: left;
+  list-style: none;
+}
+
+
+.footer-aboutus__title {
+  margin-bottom: 28px
+}
+.footer-aboutus__text {
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  padding-right: 30px
+}
+.footer-aboutus__contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+.footer-aboutus__contacts-item {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 0
+  
+}
+.footer-aboutus__contacts-item a {
+  color: white;
+  transition: color .15s
+}
+.footer-aboutus__contacts-item a:hover {
+  color: rgb(214, 63, 63);
+}
+.footer-aboutus__contacts-item a, .footer-aboutus__contacts-item a:hover {
+  text-decoration: none;
+  
+}
+
+.copyright {
+  height: 60px;
+  font-size: 13px;
+  line-height: 60px
+}
+.copyright a {
+  color: #676f73;
+  transition: color .15s
+}
+.copyright a:hover {
+  color: #f26924
+}
+.copyright a, .copyright a:hover {
+  text-decoration: none
+}
+.footer-links{
+  color:white;
+}
