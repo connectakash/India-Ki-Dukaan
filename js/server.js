@@ -16,3 +16,28 @@ app.use(function(req, res, next) {
 app.listen("3000",()=>{
     console.log("Server started at port 3000 ! ");
 });
+// Connect to the Mlab database
+mongoose.connect('mongodb://admin:admin123@ds129541.mlab.com:29541/india-ki-dukaan');
+//Product Scheme
+let ProductSchema = new mongoose.Schema({
+    
+    "ProductName":String,
+    "ProductCategory":String,
+    "AboutProduct":String,
+    "Description":String,
+    "Specification":String,
+    "Price":Number,
+    "Quantity":Number,
+    "ImageUrl":String,
+    "SellerId":Number
+    
+});
+// Creating Product Database
+let ProductModel = new mongoose.model("Product",ProductSchema);
+app.post("/add",bp,function(req,res){
+     console.log(req.body);
+    ProductModel(req.body).save(function(err,data){
+        console.log(err);
+        console.log(data);
+    });
+});
