@@ -141,7 +141,7 @@
              </div> -->
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                    <label for="exampleInputProduct">Product Name</label>
-                   <input type="text" class="form-control" id="exampleInputProduct" placeholder="Product name" required ng-model="Product">
+                   <input type="text" class="form-control" id="Product" placeholder="Product name" required ng-model="Product">
              </div>
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                    <label for="exampleInputCategory required">Category</label>
@@ -158,27 +158,27 @@
                 </div>
             <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <label for="exampleInputAbout">About Product</label>
-                  <input type="text" class="form-control" id="exampleInputAbout" placeholder="About the Product" required ng-model="aboutProduct">
+                  <input type="text" class="form-control" id="About" placeholder="About the Product" required ng-model="aboutProduct">
             </div>
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                    <label for="exampleInputDescription required">Description</label>
-                   <input type="text-area" class="form-control" id="exampleInputDescription" aria-describedby="Description" placeholder="Description" required ng-model="Description">
+                   <input type="text-area" class="form-control" id="Description" aria-describedby="Description" placeholder="Description" required ng-model="Description">
              </div>
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                    <label for="exampleInputSpecification required">Specification</label>
-                   <input type="text" class="form-control" id="exampleInputSpecification" aria-describedby="Specification" placeholder="Specification" required ng-model="Specification">
+                   <input type="text" class="form-control" id="Specification" aria-describedby="Specification" placeholder="Specification" required ng-model="Specification">
              </div>
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                    <label for="exampleInputPrice required">Price</label>
-                   <input type="text" class="form-control" id="exampleInputPrice" aria-describedby="Price" placeholder="Price" required ng-model="Price">
+                   <input type="text" class="form-control" id="Price" aria-describedby="Price" placeholder="Price" required ng-model="Price">
              </div>
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                    <label for="exampleInputQuantity required">Quantity</label>
-                   <input type="number" class="form-control" id="exampleInputQuantity" aria-describedby="Quantity" placeholder="Quantity" required ng-model="Quantity">
+                   <input type="number" class="form-control" id="Quantity" aria-describedby="Quantity" placeholder="Quantity" required ng-model="Quantity">
              </div>
              <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <label for="exampleInputImageUrl required">Image URL</label>
-                  <input type="text" class="form-control" id="exampleInputImageUrl" aria-describedby="ImageURL" placeholder="Image URL" required ng-model="ImageURL">
+                  <input type="text" class="form-control" id="ImageUrl" aria-describedby="ImageURL"  required ng-model="ImageURL">
             </div>
              <div class="form-group form-check col-xs-offset-4 col-md-12 col-xs-6">
                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -186,33 +186,34 @@
              </div>
             
              <!--<a href="#" ng-click="addUser()">Submit</a>-->
-             <button class="btn btn-primary btn-block" ng-click="submit()" onclick="validate()"">Submit</button>
+             <button class="btn btn-primary btn-block" onclick="validate();" ng-click="submit()">Submit</button>
 
            </form>
           </div>
         <div class="col-md-4 col-sm-4 col-xs-3"></div>
        </div>
       </div>
-</div>     
+</body>
 <script type="text/javascript">
       function validate()
       {
-            var productname=document.getElementById('exampleInputProduct').value;
-            var aboutp=document.getElementById('exampleInputAbout').value;
-            var proddesc=document.getElementById('exampleInputDescription').value;
-            var prodspec=document.getElementById('exampleInputSpecification').value;
-            var prodprice=document.getElementById('exampleInputPrice').value;
-            var prodq=document.getElementById('exampleInputQuantity').value;
-            var prodimgurl=document.getElementById('exampleInputImageUrl').value;
-            if((productname != null) && (aboutp != null) && (proddesc != null) && (prodspec != null) && (prodprice != null)&&(prodimgurl!=null) && (prodq!=null))
+            var productname = document.getElementById('Product').value;
+            var aboutp = document.getElementById('About').value;
+            var proddesc = document.getElementById('Description').value;
+            var prodspec = document.getElementById('Specification').value;
+            var prodprice = document.getElementById('Price').value;
+            var prodq = document.getElementById('Quantity').value;
+            var prodimgurl = document.getElementById('ImageUrl').value;
+            if((productname != null) && (aboutp != null) && (proddesc != null) && (prodspec != null) && (prodprice != null) && (prodimgurl != null) && (prodq != null))
             {
-                  alert("Product added successfully");
+                  alert("Error");
+                  console.log("error");
             }
             else
             {
-                  alert("something went wrong try again");
+                  alert("Added Succcessfully");
+                  console.log("added");
             }
       }
 </script>
-</body>
 </html>
