@@ -14,14 +14,14 @@ app.use(function(req, res, next) {
 mongoose.connect('mongodb://admin:admin123@ds129541.mlab.com:29541/india-ki-dukaan');
 
 let sellersignupSchema= new mongoose.Schema({
-    "username"       : String,
-    "email"   : String,
-   "Password"       : String,
-    "dateofbirth"  :   String,
-    " Phone"      :    Number,
-    "state"          :    String,
+    "username" : String,
+    "email"    : String,
+   "Password"  : String,
+    "dateofbirth"  :String,
+    " Phone"      :Number,
+    "state"          :String,
  
-   "Address"         :    String
+   "Address"         :String
 
 });
 

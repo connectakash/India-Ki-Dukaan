@@ -5,6 +5,7 @@ h1{
     text-align: center;
     text-decoration: underline;
     text-decoration-color:rgb(250, 193, 89);
+    background: white;
 }
 h2{
     text-decoration: underline;
@@ -17,6 +18,7 @@ h2{
 body {
   margin: 0;
   font-family: Arial;
+  background: white;
 }
 
 
@@ -26,14 +28,14 @@ body {
     padding: 0px;
   }
   .container{
-    width:1000px;
-    height:500px;
+    widows: 62.5em;
+    height:31.250em;
     background:white;
     top:25%;
     left:15%;
     position: absolute;
     box-sizing: border-box;
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 0 px;
     
  }
@@ -41,11 +43,12 @@ body {
     margin: auto;
     width: 50%;
     border: 3px solid black;
-    padding: 10px;
+    padding-top: 30px;
+    padding: 0.625rem;
     position: absolute;
-    bottom:30px;
-    left:50px;
-    right: 50px;
+    bottom:7.875rem;
+    left:3.125rem;
+    right: 3.125rem;
     background-color: black;
     color:white;
     font-size: 20px;
