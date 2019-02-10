@@ -1,0 +1,61 @@
+
+.track
+{
+    text-align: center;
+}
+h5,h6,h2
+{
+    text-align: center;
+}
+.desc
+{
+    text-align: center;
+    margin-left: 100%;
+    margin-top: 8%;
+}
+.itemship
+{
+    text-align: left;
+    padding-left: 40px;
+}
+.summary
+{
+    text-align: center;
+}
+.shipping
+{
+    text-align: center;
+}
+.rowdetails
+{
+    border:1px 1px 1px 1px;
+    border-style: solid;
+    border-color:rgb(165, 150, 150);
+    padding:5px 5px;
+}
+.itemdetails
+{
+    padding-top: 10px;
+    border:1px 1px 1px 1px;
+    border-style: solid;
+    border-color:rgb(165, 150, 150);
+    padding:5px 5px;
+    margin-top: 10px;
+}
+#image
+{
+    size:300px;
+    width: 100%;
+    height: 120%;
+    margin-left:50px;
+}
+.quantity,.price,.total
+{
+    margin-bottom: 80%;
+    color: brown;
+}
+.totdetails
+{
+    float:right;
+    
+}
