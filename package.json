@@ -1,16 +1,20 @@
 {
   "name": "india-ki-dukaan",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "E Commerce",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "E Commerce"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/connectakash/India-Ka-Dukaan.git"
   },
-  "author": "",
+  "keywords": [
+    "E",
+    "commerce"
+  ],
+  "author": "Niit Team",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/connectakash/India-Ka-Dukaan/issues"
@@ -19,9 +23,10 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "http": "0.0.0",
-    "mongoose": "^5.4.10",
+    "mongoose": "^5.4.11",
     "nodemailer": "^5.1.1"
   }
 }
