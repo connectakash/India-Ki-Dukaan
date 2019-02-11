@@ -62,40 +62,40 @@
               <div id="section"> 
                <img src="https://images-na.ssl-images-amazon.com/images/I/41BhKPIAyjL.png" id="icon"><span class="signup">HeLLo!!</span>
                 </div>
-                <form class="form-container">
+                <form class="form-container" ng-controller="userSign">
                
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <i class="fa fa-user" aria-hidden="true"></i>
                  <label for="exampleInputUsername required">User Name</label>
-                 <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder="User Name" required ng-model="username">
+                 <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder="User Name" required ng-model="username" ng-model="uName">
                 </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                  <label for="exampleInputEmail1 required">Email address</label>
-                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required ng-model="email">
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required ng-model="email" ng-model>
                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-key" aria-hidden="true"></i>
                  <label for="exampleInputPassword1">Password</label>
-                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Atleast 6 characters" required ng-model="password">
+                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Atleast 6 characters" required ng-model="password" ng-model="uPass">
                </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-phone" aria-hidden="true"></i>
                     <label for="exampleInputUsername required">Phone No</label>
-                    <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="Phone No" required ng-model="Phone">
+                    <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="Phone No" required ng-model="Phone" ng-model="uPhone">
                </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-address-book" aria-hidden="true"></i>
                 <label for="exampleInputUsername required">Address</label>
-                <input type="text" class="form-control" id="exampleaddress" aria-describedby="Address" placeholder="Address" required ng-model="address">
+                <input type="text" class="form-control" id="exampleaddress" aria-describedby="Address" placeholder="Address" required ng-model="address" ng-model="uAddr">
                </div>
                <div class="form-group form-check col-xs-offset-4 col-md-12 col-xs-6">
-                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                 <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="TandC">
                  <label class="form-check-label" for="exampleCheck1"> Terms and Condition</label>
                </div>
               
-               <a href="#" ng-click="addUser()">Submit</a>
+               <button type="button" class="btn btn-primary">Primary</button>
                <p>Already have an account? <a href="C:\Users\Ashitha\Desktop\internship\login.html">Login in</a></p>
              </form>
             </div>
