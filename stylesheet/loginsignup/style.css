@@ -5,6 +5,11 @@
     color: aliceblue;
     text-align:center;
     padding-bottom: 40px;
+    
+}
+#login
+{
+    background:#d6e4eb;
 }
 .login
 {
@@ -19,11 +24,6 @@
     left:40px;
 }
 
-#login
- {
-     background-color: 
-     
- }
  .form-container
  {
  	border:0px solid white;

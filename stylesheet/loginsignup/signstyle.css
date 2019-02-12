@@ -8,6 +8,14 @@ button{
     text-align: left;
    
 }
+#signup
+{
+  background:#d6e4eb;
+}
+.container,.row
+{
+  background: #d6e4eb;
+}
 
 .navbar {	
   
@@ -129,7 +137,7 @@ body
      width:70px;
      height: 70px;
      margin-top:-10px;
-     margin-left: auto;
+     margin-left: 40%;
      margin-bottom: 10px;
  }
  p{
