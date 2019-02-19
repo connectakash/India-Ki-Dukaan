@@ -32,6 +32,27 @@ let ProductSchema = new mongoose.Schema({
     "SellerId":Number
     
 });
+//Seller SignUp Schema
+let SellerSignupSchema = new mongoose.Schema({
+    "UserName":String,
+    "Email":String,
+    "Password":String,
+    "DOB":Date,
+    "PhoneNo":Number,
+    "State":String,
+    "Address":String
+
+});
+//User SignUp Schema
+let UserSignupSchema = new mongoose.Schema({
+    "UserName":String,
+    "Email":String,
+    "Password":String,
+    "PhoneNo":Number,
+    "Address":String
+
+});
+
 // Creating Product Database
 let ProductModel = new mongoose.model("Product",ProductSchema);
 app.post("/add",bp,function(req,res){
@@ -39,5 +60,28 @@ app.post("/add",bp,function(req,res){
     ProductModel(req.body).save(function(err,data){
         console.log(err);
         console.log(data);
+    });
+});
+//Creating SellerSignUp Database
+let SellerSignUpModel = new mongoose.model("SellerSignUp",SellerSignupSchema);
+app.post("/sellersignup",bp,function(req,res){
+    console.log(req.body);
+    SellerSignUpModel(req.body).save(function(err,data){
+       console.log(err);
+       console.log(data);
+   });
+});
+//Creating UserSignUp Database
+let UserSignUpModel = new mongoose.model("UserSignUp",UserSignupSchema);
+app.post("/usersignup",bp,function(req,res){
+    console.log(req.body);
+    UserSignUpModel(req.body).save(function(err,data){
+       console.log(err);
+       console.log(data);
+   });
+});
+app.get("/product",function(req,res){
+    ProductModel.find({},function(err,data){
+        res.json(data);
     });
 });

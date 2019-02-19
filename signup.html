@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SignUp</title>
+    <link rel="stylesheet" href="stylesheet/indexpage/style.css">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--BootStrap and other js espically for header-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="stylesheet/loginsignup/signstyle.css">
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+    <script src="backend/usersignup.js"></script>
+
 </head>
-</head>
-<body id="signup">
+<body ng-app="myApp">
 
 <!--Nav Bar when not logged in-->
 <nav class="navbar navbar-expand-lg ">
@@ -28,11 +37,39 @@
             
  <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
     
-   
+    <ul class="navbar navbar-nav" >
+       
+            <a class="nav-item nav-link" href="index.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
+        
+        
+            <a class="nav-item nav-link" href="index.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
+        
+       
+            <a class="nav-item nav-link" href="contactus.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
+        
+        
+            <a class="nav-item nav-link" href="aboutUs.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
+        
+            <form class="header-search">
+                    <input class="input" placeholder="  Search here">
+                    <button class="search-btn">Search</button>
+            </form>
+           
+        
+    </ul>
     <!-- <div class="circleBehind blue" id="navbarSupportedContent"></div> </div> -->
     
     <ul class="navbar navbar-nav navbar-right">
-           
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-user-plus"></span><strong> SignUp</strong>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                            <a class="dropdown-item" href="signup.html">User SignUp</a>
+                         
+                            <a class="dropdown-item" href="sellersignup.html">Seller SignUp</a>
+                    </div>
+            </li>
 
             <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,45 +95,50 @@
         <div class="container">
           <div class="row">
               <div class="col-md-4 col-sm-4 col-xs-3"></div>
-              <div class="col-md-6 col-sm-6 col-xs-12"> 
+              <div class="col-md-6 col-sm-6 col-xs-12" ng-controller="usersignup"> 
               <div id="section"> 
                <img src="https://images-na.ssl-images-amazon.com/images/I/41BhKPIAyjL.png" id="icon"><span class="signup">HeLLo!!</span>
                 </div>
-                <form class="form-container" ng-controller="userSign">
+                <form class="form-container">
                
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <i class="fa fa-user" aria-hidden="true"></i>
                  <label for="exampleInputUsername required">User Name</label>
-                 <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder="User Name" required ng-model="username" ng-model="uName">
+                 <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder="User Name" required ng-model="username">
                 </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                  <label for="exampleInputEmail1 required">Email address</label>
-                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required ng-model="email" ng-model>
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required ng-model="email">
                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-key" aria-hidden="true"></i>
                  <label for="exampleInputPassword1">Password</label>
-                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Atleast 6 characters" required ng-model="password" ng-model="uPass">
+                 <input type="password" class="form-control" id="Pass" placeholder="Atleast 6 characters" required ng-model="password">
                </div>
+               <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                <i class="fa fa-key" aria-hidden="true"></i>
+               <label for="exampleInputPassword1"> Confirm Password</label>
+               <input type="password" class="form-control" id="ConfirmPass" placeholder="Atleast 6 characters" required>
+                </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-phone" aria-hidden="true"></i>
                     <label for="exampleInputUsername required">Phone No</label>
-                    <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="Phone No" required ng-model="Phone" ng-model="uPhone">
+                    <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="Phone No" required ng-model="phone">
                </div>
                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                   <i class="fa fa-address-book" aria-hidden="true"></i>
                 <label for="exampleInputUsername required">Address</label>
-                <input type="text" class="form-control" id="exampleaddress" aria-describedby="Address" placeholder="Address" required ng-model="address" ng-model="uAddr">
+                <input type="text" class="form-control" id="exampleaddress" aria-describedby="Address" placeholder="Address" required ng-model="address">
                </div>
                <div class="form-group form-check col-xs-offset-4 col-md-12 col-xs-6">
                  <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="TandC">
                  <label class="form-check-label" for="exampleCheck1"> Terms and Condition</label>
                </div>
               
-               <button type="button" class="btn btn-primary">Primary</button>
-               <p>Already have an account? <a href="C:\Users\Ashitha\Desktop\internship\login.html">Login in</a></p>
+               <button type="button" class="btn btn-primary btn-block" onclick="validate();" ng-click="submit()">Submit</button>
+               <p>Already have an account? <a href="login.html">Login in</a></p>
              </form>
             </div>
           <div class="col-md-4 col-sm-4 col-xs-3"></div>
@@ -231,4 +273,27 @@
 
 
 </body>
+
+<script type="text/javascript">
+    function validate()
+    {
+      var password=document.getElementById('Pass').value;
+      var confirmpassword=document.getElementById('ConfirmPass').value;
+      if((password == null) && (confirmpassword == null))
+      {
+        //document.getElementById("Button").disabled = true;
+        alert("Error");
+        console.log("Error");
+      }
+      else
+      {
+        if(password != confirmpassword)
+        {
+          alert("Incorrect Password!");
+          console.log("Incorrect Password!");
+        }
+      }
+    }
+</script>
+
 </html>
