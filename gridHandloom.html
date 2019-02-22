@@ -35,20 +35,39 @@
        </div>
      
         <div class="row" ng-controller="getproductgrid">
-            <div class="col-lg-4 col-sm-6 bg" ng-repeat="d in data">
+            <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="d in data">
+                <!-- <div class="addphov">
                 <a href="http://127.0.0.1:5500/prod.html?ProductName={{d.ProductName}}"> <div class="grid-box">
                 <img ng-src="{{d.ImageUrl}}" data-text="its a ancient vessel made up of bronze">
                 </div></a>
-                <div class="product-cart">
-                    <button class="btn btn-primary" type="button">Add To Cart</button></div>
+                <div class="product-cart overlay">
+                    <button class="btn btn-primary overlay" type="button">Add To Cart</button></div>
                 <div class="product-info">
                     <h5>{{d.ProductName}}</h5>
                     <h6>&#8377; {{d.Price}} /-</h6>
                 </div>
-            </div>
+            </div> -->
+
+
+            <div class="addphov">
+                    <a href="http://127.0.0.1:5500/prod.html?ProductName={{d.ProductName}}">
+                        <div class="grid-box">
+                            <img ng-src="{{d.ImageUrl}}" data-text="its a ancient vessel made up of bronze">
+                        </div>
+                    </a>
+                    <div class="overlay"><button class="btn btn-primary">Add To Cart</button></div>
+                    <br>
+                    <h5 style="text-align: center;">{{d.ProductName}}</h5>
+                    <br>
+                    <h5 style="text-align:center;"><strong>&#8377;{{d.Price}}</strong></h5><br>
+                    </div>
+
+
+            </div><br>
 
                 
         </div>
+        <br>
     </div>
     
 </body>

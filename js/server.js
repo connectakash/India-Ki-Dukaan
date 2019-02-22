@@ -85,3 +85,8 @@ app.get("/product",function(req,res){
         res.json(data);
     });
 });
+app.get("/productdesc",function(req,res){
+    ProductModel.find({},function(err,data){
+        res.json(data);
+    });
+});
