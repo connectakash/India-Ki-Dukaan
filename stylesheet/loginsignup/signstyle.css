@@ -9,11 +9,15 @@ button{
     text-align: left;
    
 }
-#signup
+.bottom
 {
   background:#d6e4eb;
 }
-.container,.row
+.top
+{
+  background: #d6e4eb;
+}
+.middle,
 {
   background: #d6e4eb;
 }

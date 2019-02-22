@@ -1,6 +1,7 @@
 body
 {
-    background: #d6e4eb;
+    /* background: #d6e4eb; */
+    background: white;
 }
 h1
 {
@@ -14,7 +15,7 @@ h1
     background: #d6e4eb;
 }
 
-.product-info>h5
+/* .product-info>h5
 {
     font-weight: bold;
     font-family: "Special Elite";
@@ -28,12 +29,12 @@ h1
     font-family: "Special Elite";
     text-align:center;
 
-}
-.product-cart
+} */
+/* .product-cart
 {
     text-align: center;
     padding-bottom: 6px;
-}
+} */
 img{
     max-width: 100%;
     margin:2px 2px 2px 2px;
@@ -42,12 +43,33 @@ img{
     border-block-start-style: double;
     border-block-end-style: double;
 }
-.grid-box:hover img
+/* .grid-box:hover img
 {
     transform:scale(0.8);
     transition: all 1s ease-in-out;
     /* filter: brightness(0.5); */
     
+/* }  */
+.overlay {
+	position: absolute; 
+	bottom: 0; 
+	
+	color: #f1f1f1; 
+	width: 90%;
+	transition: .5s ease;
+	opacity:0;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+	
+  }
+  .addphov{
+    background: white;
+}
+.addphov:hover .overlay {
+  opacity: 1;
+  max-width: 100%;
 }
 /*.grid-box:after
 {
@@ -66,13 +88,13 @@ img{
   transition: 0.5s;
 
 }*/
-.grid-box:hover::after{
+/* .grid-box:hover::after{
     opacity:1;
     top:0;
-}
+} */
 
-.grid-box
+/* .grid-box
 {
     display: inline-block;
     margin: 2px;
-}
+} */
