@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>India Ki Dukaan</title>
+    <!--BootStrap and other js espically for header-->
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./js/cart/javascript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="stylesheet/indexpage/style.css"> -->
+    <link rel="stylesheet" href="./stylesheet/cart/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+
+</head>
+<body>
+
+
+<!--Nav Bar when not logged in-->
+<nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="index.html"><img src="./images/logo/logo.png" width="150" height="100" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                 </button>  
+                
+     <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
+        
+        <ul class="navbar navbar-nav" >
+           
+                <a class="nav-item nav-link" href="index.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
+            
+            
+                <a class="nav-item nav-link" href="index.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
+            
+           
+                <a class="nav-item nav-link" href="contactus.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
+            
+            
+                <a class="nav-item nav-link" href="aboutUs.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
+            
+                <form class="header-search">
+                        <input class="input" placeholder="  Search here">
+                        <button class="search-btn">Search</button>
+                </form>
+               
+            
+        </ul>    
+        <ul class="navbar navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-user-plus"></span><strong> SignUp</strong>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                <a class="dropdown-item" href="signup.html">User SignUp</a>
+                             
+                                <a class="dropdown-item" href="sellersignup.html">Seller SignUp</a>
+                        </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-sign-in"></span><strong> Login</strong>
+                            </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                        <a class="dropdown-item" href="login.html">User Login</a>
+                                        <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
+                                </div>
+                </li>  
+        </ul> 
+        
+    </div>
+    
+</nav>
+
+
+<main>
+    <div class="basket">
+      <div class="basket-module">
+        <label for="promo-code">Enter a promotional code</label>
+        <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+        <button class="promo-code-cta">Apply</button>
+      </div>
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">4</span> x Eliza J</strong> Lace Sleeve Cuff Dress</h1>
+            <p><strong>Navy, Size 18</strong></p>
+            <p>Product Code - 232321939</p>
+          </div>
+        </div>
+        <div class="price">26.00</div>
+        <div class="quantity">
+          <input type="number" value="4" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">104.00</div>
+        <div class="remove">
+          <button>Remove</button>
+        </div>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="http://placehold.it/120x166" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">1</span> x Whistles</strong> Amella Lace Midi Dress</h1>
+            <p><strong>Navy, Size 10</strong></p>
+            <p>Product Code - 232321939</p>
+          </div>
+        </div>
+        <div class="price">26.00</div>
+        <div class="quantity">
+          <input type="number" value="1" min="1" class="quantity-field">
+        </div>
+        <div class="subtotal">26.00</div>
+        <div class="remove">
+          <button>Remove</button>
+        </div>
+      </div>
+    </div>
+    <aside>
+      <div class="summary">
+        <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+        <div class="summary-subtotal">
+          <div class="subtotal-title">Subtotal</div>
+          <div class="subtotal-value final-value" id="basket-subtotal">130.00</div>
+          <div class="summary-promo hide">
+            <div class="promo-title">Promotion</div>
+            <div class="promo-value final-value" id="basket-promo"></div>
+          </div>
+        </div>
+        <div class="summary-delivery">
+          <select name="delivery-collection" class="summary-delivery-selection">
+              <option value="0" selected="selected">Select Collection or Delivery</option>
+             <option value="collection">Collect at Distribution Spot</option>
+             <option value="first-class">Delivery</option>
+             
+          </select>
+        </div>
+        <div class="summary-total">
+          <div class="total-title">Total</div>
+          <div class="total-value final-value" id="basket-total">130.00</div>
+        </div>
+        <div class="summary-checkout">
+          <button class="checkout-cta">Go to Checkout</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+
+
+
+
+ <!--Footer-->
+
+ <div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="footer__widgets">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-lg-4 col-sm-6 footer__aboutus">
+                            <div class="footer-aboutus">
+                                <div class="footer-aboutus__title">
+                                    <h4 class="footer-aboutus__header decor-header">About Us</h4>
+                                </div>
+                                <div class="footer-aboutus__text">
+                                    Providing the best and pure Quality of Indian products
+                                </div>
+                                <ul class="footer-aboutus__contacts">
+                                    <li class="footer-aboutus__contacts-item">
+                                        <a href="contactus.html">NIIT Vijaynagar, Bengakuru</a>
+                                    </li>
+                                    <li class="footer-aboutus__contacts-item">
+                                        <a href="contactus.html">info@indiakidukaan.co.in</a>
+                                    </li>
+                                    <li class="footer-aboutus__contacts-item">
+                                        <a href="contactus.html">+91-1234567890</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-2 col-sm-6 col-md-3">
+                            <div class="footer-links" data-collapse="" data-collapse-item="" data-collapse-opened-class="footer-links--opened">
+                                <div class="footer-links__title">
+                                    <h4 class="footer-links__header" data-collapse-trigger="">Information <svg class="footer-links__header-arrow" height="6px" width="9px">
+                                    <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
+                                </div>
+                                <div class="footer-links__content" data-collapse-content="">
+                                    <ul class="footer-aboutus__contacts">
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="about.html">About Us</a>
+                                        </li>
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="">Delivery Information</a>
+                                        </li>
+                                        
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="contactus.html">Contact Us</a>
+                                        </li>
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="">Returns</a>
+                                        </li>
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="">Site Map</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-2 col-sm-6 col-md-3">
+                            <div class="footer-links" data-collapse="" data-collapse-item="" data-collapse-opened-class="footer-links--opened">
+                                <div class="footer-links__title">
+                                    <h4 class="footer-links__header" data-collapse-trigger="">My Account <svg class="footer-links__header-arrow" height="6px" width="9px">
+                                    <use xlink:href="images/sprite.svg#arrow-down-9x6"></use></svg></h4>
+                                </div>
+                                <div class="footer-links__content" data-collapse-content="">
+                                    <ul class="footer-aboutus__contacts">
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="">My Account</a>
+                                        </li>
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="">Order History</a>
+                                        </li>
+                                        <li class="footer-aboutus__contacts-item">
+                                            <a class="footer-links__link" href="">Wish List</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 footer__followus">
+                            <div class="footer-followus">
+                                <div class="footer-followus__title">
+                                    <h4 class="footer-followus__header">Follow Us</h4>
+                                </div>
+                                <div class="footer-followus__text">
+                                    Follow us on social Media
+                                </div>
+                                <form class="footer-followus__subscribe-form">
+                                    <input class="form-control form-control--footer" placeholder="Email address" type="email"> <button class="btn btn-primary" type="submit">Subscribe</button>
+                                </form>
+                                <ul class="footer-followus__social-links">
+                                    <li class="footer-followus__social-link">
+                                        <a href="#" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="footer-followus__social-link">
+                                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li class="footer-followus__social-link">
+                                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                                    </li>
+                                    <li class="footer-followus__social-link">
+                                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li class="footer-followus__social-link">
+                                        <a href="#" target="_blank"><i class="fa fa-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-12 col-sm-auto">
+                <div class="copyright">
+                    <a href="">India-ki-Dukaan</a> by <a href="">NIIT</a>
+                </div>
+            </div>
+            <div class="footer__payments col-auto"><img alt="payment image" src="images/indexpage/payments.png" srcset="images/indexpage/payments.png, images/indexpage/payments@2x.png 2x"></div>
+        </div><br>
+    </div>
+    
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+  
+
+    <script  src="./js/cart/javascript.js"></script>
+</body>
+
+</html>
