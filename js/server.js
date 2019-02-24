@@ -80,8 +80,38 @@ app.post("/usersignup",bp,function(req,res){
        console.log(data);
    });
 });
-app.get("/product",function(req,res){
-    ProductModel.find({},function(err,data){
+// app.get("/product",function(req,res){
+//     ProductModel.find({},function(err,data){
+//         res.json(data);
+//     });
+// });
+app.get("/handloom",function(req,res){
+    ProductModel.find({"ProductCategory":"Handloom"},function(err,data){
+        res.json(data);
+    });
+});
+app.get("/electronic",function(req,res){
+    ProductModel.find({"ProductCategory":"Electronic"},function(err,data){
+        res.json(data);
+    });
+});
+app.get("/handicraft",function(req,res){
+    ProductModel.find({"ProductCategory":"Handicraft"},function(err,data){
+        res.json(data);
+    });
+});
+app.get("/antique",function(req,res){
+    ProductModel.find({"ProductCategory":"Antique"},function(err,data){
+        res.json(data);
+    });
+});
+app.get("/furnitures",function(req,res){
+    ProductModel.find({"ProductCategory":"Furniture"},function(err,data){
+        res.json(data);
+    });
+});
+app.get("/ayurveda",function(req,res){
+    ProductModel.find({"ProductCategory":"Ayurveda"},function(err,data){
         res.json(data);
     });
 });

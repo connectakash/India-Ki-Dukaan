@@ -1,27 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
-button{
-    margin-bottom:2px;
-    border-bottom: 10px;
-    font-family: Raleway;
-}
-#section {
-    padding-top: 20px;
-    text-align: left;
-   
-}
-.bottom
-{
-  background:#d6e4eb;
-}
-.top
-{
-  background: #d6e4eb;
-}
-.middle,
-{
-  background: #d6e4eb;
-}
+body{
+    background: white;
+    
 
+}
 .navbar {	
   
     background-color: black;	
@@ -76,97 +58,75 @@ button{
   font-size: inherit;
   border-radius: 40px 0 0px 40px;
   }
-  h1 .signup{
-    font-family: Raleway;
-  }
   
-  h2{
+  h2 {
     font-family: Raleway;
     text-decoration: underline;
       text-decoration-color: currentcolor;
       text-decoration-color: rgb(214, 63, 63);
+      text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  /* gap between nav and container */
+  .container{
+      padding-top: 10px;
+  }
+  
+  /* add to cart over items */
+  .overlay {
+      position: absolute; 
+      bottom: 0; 
+      
+      color: #f1f1f1; 
+      width: 90%;
+      transition: .5s ease;
+      opacity:0;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
+      
+    }
+    .addphov{
+        background: white;
+    }
+    .addphov:hover .overlay {
+      opacity: 1;
+      max-width: 100%;
+    }
+   
+  .catback{
+      max-width: 100%;
+      background: white;
+      text-align: center;
+  }
+  .catback:hover{
+      transform: scale(1.2);
   }
 
-.row{
-    background: white;
+  .wrapper {
+    text-align: center;
 }
 
-#thumbnail
-{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-a:hover
-{
-   color:red;
-}
-.signup
-{
-    font-family: Raleway;
-    margin:auto;
+.button {
+    position: absolute;
+    padding: 10px 30px 10px 30px;
+    border: 2px solid black;
+    background-color: white;
     color: black;
-    text-align:center;
-    padding-bottom: 40px;
+ 
+    
 }
 
-body
- {
- 	background-color: #d6e4eb;
- }
- #section{
-     font-size: 1.5em;
-     
- }
- .form-container
- {
- 	border:0px solid white;
- 	padding:30px 30px;
-     /* margin: 12vh; */
-     
 
-     
-     /* -webkit-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
-     /* -moz-box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75); */ 
-     box-shadow: 18px 18px 25px -1px rgba(0,0,0,0.75);
-     font-weight: 20px;
-     background:white;
- }
- .container
- {
-    color:black;
- }
- .indent{
-   
- }
- u
- {
-     color: rgba(224, 168, 13, 0.692);
-     
- }
- #icon
- {
-     size: 5px;
-     width:70px;
-     height: 70px;
-     margin-top:-10px;
-     margin-left: 40%;
-     margin-bottom: 10px;
- }
- p{
-     color: black;
- }
- .contact1-pic img {
-    max-width: 100%;
-}
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-/* img{
-    margin-top
-} */
+
 /* footer */
-h5 :hover
+h5:hover
 {
   color:rgb(214, 63, 63);
 }

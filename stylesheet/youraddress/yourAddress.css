@@ -21,10 +21,10 @@ h3{
     text-align: center;
 }
 body{
-    padding-top: 50px;
+    /* padding-top: 50px; */
     background: #d6e4eb;
 }
-.row{
-    /* padding-left: 20px; */
+/* .row{
+    padding-left: 20px;
     margin-left: 70px;
-}
+} */
