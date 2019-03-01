@@ -16,6 +16,13 @@ app.use(function(req, res, next) {
 app.listen("3000",()=>{
     console.log("Server started at port 3000 ! ");
 });
+let transporter = nodemailer.createTransport({
+    service:'Gmail',
+    auth:{
+        user:process.env.EMAIL,
+        pass:process.env.PASS
+    }
+});
 // Connect to the Mlab database
 mongoose.connect('mongodb://admin:admin123@ds129541.mlab.com:29541/india-ki-dukaan');
 //Product Scheme
@@ -56,7 +63,6 @@ let UserSignupSchema = new mongoose.Schema({
 // Creating Product Database
 let ProductModel = new mongoose.model("Product",ProductSchema);
 app.post("/add",bp,function(req,res){
-     console.log(req.body);
     ProductModel(req.body).save(function(err,data){
         console.log(err);
         console.log(data);
@@ -76,8 +82,29 @@ let UserSignUpModel = new mongoose.model("UserSignUp",UserSignupSchema);
 app.post("/usersignup",bp,function(req,res){
     console.log(req.body);
     UserSignUpModel(req.body).save(function(err,data){
-       console.log(err);
-       console.log(data);
+        if(err)
+        {
+            console.log(err);
+        }
+            if(data)
+            {
+                let mailOptions = {
+                    from:"info@indiakidukaan.in",
+                    to:req.body.Email,
+                    subject:"Welcome",
+                    text:"Thank You for registering on India ki Dukaan, Now enjoy shopping indian products"
+                };
+                transporter.sendMail(mailOptions,function(error,info){
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else{
+                        console.log('Email Sent'+info.response);
+                    }
+                });
+                console.log(data);
+            }
    });
 });
 // app.get("/product",function(req,res){
@@ -115,8 +142,63 @@ app.get("/ayurveda",function(req,res){
         res.json(data);
     });
 });
+app.get("/prod/:name",function(req,res){
+    var text = req.params.name;
+    console.log(text);
+    ProductModel.find({"ProductName":text},function(err,data){
+        res.json(data);
+    });
+});
 app.get("/productdesc",function(req,res){
     ProductModel.find({},function(err,data){
         res.json(data);
+    });
+});
+
+//retriving userlogin data from database
+app.post("/login",bp,function(req,res){
+    UserSignUpModel.find({"Email":req.body.Email,"Password":req.body.Password},function(err,data){
+        if(data.length == 0)
+        {
+            console.log("invalid");
+            let data = {
+                "msg":"invalid"
+            };
+            res.json(data);
+        }
+        else
+        {
+            let data = {
+                "msg":"success"
+
+            };
+            res.json(data);
+        }
+    });
+});
+app.get("/prod.ejs/:word",function(req,res)
+{
+    var text = req.params.word;
+    console.log(text);
+});
+//retriving sellerlogin data from database
+app.post("/selllogin",bp,function(req,res){
+    SellerSignUpModel.find({"Email":req.body.Email,"Password":req.body.Password},function(err,data){
+        if(data.length == 0)
+        {
+            console.log("invalid");
+            let data = {
+                "msg":"invalid"
+            };
+            res.json(data);
+        }
+        else
+        {
+            let data = {
+                "msg":"success"
+
+            };
+            res.json(data);
+        }
     });
 });

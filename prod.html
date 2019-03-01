@@ -19,15 +19,15 @@
 </head>
 <body ng-App="myApp">
     <h1><strong>Product Details</strong></h1>
-    <div class="container" ng-contoller="getproductdesc">
+    <div class="container" ng-contoller="prod">
         <br><br>
         <div class="row">
             <div class="col-lg-6 col-xs-12">
                 <img src="https://m.media-amazon.com/images/I/619rILCql5L._SR500,500_.jpg" alt="">
             </div>
-            <div class="col-lg-6 col-xs-12">
+            <div class="col-lg-6 col-xs-12" ng-repeat="d in data">
                 <div class="h2text">
-                   <h2>Antique Vessel</h2>
+                   <h2>{{d.ProductName}}</h2>
                 </div>
                 <br>
                 <br>
