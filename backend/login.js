@@ -1,13 +1,13 @@
 let app = angular.module("myApp",["ngRoute"]);
-app.controller('userlogin',function($scope,$http,$window){
+app.controller('userlog',function($scope,$http,$window){
     console.log("inside controller");
     $scope.submit=function(){
             if($scope.email && $scope.password)
             {
                 console.log("Data Received");
                 let value={
-                    "UserEmail":$scope.email,
-                    "UserPassword":$scope.password
+                    "Email":$scope.email,
+                    "Password":$scope.password
                 };
                 $http.post("http://localhost:3000/userlogin",value).then(function(response){
                     console.log(response.data.msg);
