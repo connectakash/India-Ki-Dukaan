@@ -2,6 +2,8 @@ let app=angular.module("myApp",[]);
 app.controller('shipadd',function($scope,$http){
     console.log("inside controller");
     $scope.submit=function(){
+        if($scope.name && $scope.email && $scope.mobile && $scope.pincode && $scope.houseno && $scope.loaclity && $scope.landmark && $scope.city && $scope.State)
+        {
             console.log("inside submit");
             let data={
                 //"SellerName":$scope.Sellername,
@@ -22,5 +24,10 @@ app.controller('shipadd',function($scope,$http){
             $http.post("http://localhost:3000/shipdetails",data).then(function(response){
                 console.log("data request sent");
             });
+        }
+        else
+        {
+            alert("Input all Fields");
+        }
     }
 });
