@@ -15,7 +15,7 @@ app.controller('addproduct',function($scope,$http){
                 "Price":$scope.Price,
                 "Quantity":$scope.Quantity,
                 "ImageUrl":$scope.ImageURL,
-                "SellerId":1
+                "SellerEmail":$scope.Email
 
             };
             

@@ -36,7 +36,7 @@ let ProductSchema = new mongoose.Schema({
     "Price":Number,
     "Quantity":Number,
     "ImageUrl":String,
-    "SellerId":Number
+    "SellerEmail":String
     
 });
 //Seller SignUp Schema
@@ -59,13 +59,50 @@ let UserSignupSchema = new mongoose.Schema({
     "Address":String
 
 });
+//Shipping Details
+let ShippingDetailsSchema = new mongoose.Schema({
+    "Name":String,
+    "Email":String,
+    "PhoneNo":Number,
+    "PinCode":Number,
+    "HouseNo":String,
+    "Loaclity":String,
+    "Landmark":String,
+    "City":String,
+    "State":String,
+    "ProductName":String
+});
+
+
+
 
 // Creating Product Database
 let ProductModel = new mongoose.model("Product",ProductSchema);
 app.post("/add",bp,function(req,res){
     ProductModel(req.body).save(function(err,data){
-        console.log(err);
-        console.log(data);
+        if(err)
+        {
+            console.log(err);
+        }
+            if(data)
+            {
+                let mailOptions = {
+                    from:"info@indiakidukaan.in",
+                    to:req.body.SellerEmail,
+                    subject:"Product Added",
+                    text:"Your Product has been Successfully Added to our Database. Thank You"
+                };
+                transporter.sendMail(mailOptions,function(error,info){
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else{
+                        console.log('Email Sent'+info.response);
+                    }
+                });
+                console.log(data);
+            }
     });
 });
 //Creating SellerSignUp Database
@@ -73,8 +110,29 @@ let SellerSignUpModel = new mongoose.model("SellerSignUp",SellerSignupSchema);
 app.post("/sellersignup",bp,function(req,res){
     console.log(req.body);
     SellerSignUpModel(req.body).save(function(err,data){
-       console.log(err);
-       console.log(data);
+        if(err)
+        {
+            console.log(err);
+        }
+            if(data)
+            {
+                let mailOptions = {
+                    from:"info@indiakidukaan.in",
+                    to:req.body.Email,
+                    subject:"Welcome",
+                    text:"Thank You for registering on India ki Dukaan, Now your allowed to add your Products on our Website and Sell them to customers. For any queries contant indiakidukaan@gmail.com"
+                };
+                transporter.sendMail(mailOptions,function(error,info){
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else{
+                        console.log('Email Sent'+info.response);
+                    }
+                });
+                console.log(data);
+            }
    });
 });
 //Creating UserSignUp Database
@@ -107,6 +165,37 @@ app.post("/usersignup",bp,function(req,res){
             }
    });
 });
+
+let ShippingDetailsModel = new mongoose.model("ShippingDetails",ShippingDetailsSchema);
+app.post("/shipdetails",bp,function(req,res){
+    console.log(req.body);
+    ShippingDetailsModel(req.body).save(function(err,data){
+        if(err)
+        {
+            console.log(err);
+        }
+            if(data)
+            {
+                let mailOptions = {
+                    from:"info@indiakidukaan.in",
+                    to:req.body.Email,
+                    subject:"Order Confirmed",
+                    text:"Your Product order is Successful. The product is expected to be Delivered within 2-3 Working days. Thank Your for Shopping with us."
+                };
+                transporter.sendMail(mailOptions,function(error,info){
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else{
+                        console.log('Email Sent'+info.response);
+                    }
+                });
+                console.log(data);
+            }
+   });
+});
+
 // app.get("/product",function(req,res){
 //     ProductModel.find({},function(err,data){
 //         res.json(data);
@@ -156,7 +245,7 @@ app.get("/productdesc",function(req,res){
 });
 
 //retriving userlogin data from database
-app.post("/login",bp,function(req,res){
+app.post("/userlogin",bp,function(req,res){
     UserSignUpModel.find({"Email":req.body.Email,"Password":req.body.Password},function(err,data){
         if(data.length == 0)
         {
@@ -176,11 +265,11 @@ app.post("/login",bp,function(req,res){
         }
     });
 });
-app.get("/prod.ejs/:word",function(req,res)
-{
-    var text = req.params.word;
-    console.log(text);
-});
+// app.get("/prod.ejs/:word",function(req,res)
+// {
+//     var text = req.params.word;
+//     console.log(text);
+// });
 //retriving sellerlogin data from database
 app.post("/selllogin",bp,function(req,res){
     SellerSignUpModel.find({"Email":req.body.Email,"Password":req.body.Password},function(err,data){

@@ -14,9 +14,11 @@ app.controller('sellerlogin',function($scope,$http,$window){
                     if(response.data.msg == "success")
                     {
                         console.log("Redirect");
+                        alert("Login Successful");
                         $window.location.href="/sellerDashboard.html";
                     }
                     else{
+                        alert("Invalid Email or Password");
                         $scope.value="Email or Password Incorrect";
                     }
                 });

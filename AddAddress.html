@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Address</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -13,71 +16,73 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./stylesheet/addAddress/style.css">
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="backend/shippingadd.js"></script>
     
 </head>
 </head>
-<body>
+<body ng-app="myApp">
   
-    <!--Nav Bar when not logged in-->
-<nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="index.html"><img src="./images/logo/logo.png" width="150" height="100" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-             </button>  
-            
- <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
-    
-    <ul class="navbar navbar-nav" >
-       
-            <a class="nav-item nav-link" href="index.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
+        <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="index.html"><img src="./images/logo/logo.png" width="150" height="100" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                         </button>  
+                        
+             <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
+                
+                <ul class="navbar navbar-nav" >
+                   
+                        <a class="nav-item nav-link" href="index.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
+                    
+                    
+                        <a class="nav-item nav-link" href="index.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
+                    
+                   
+                        <a class="nav-item nav-link" href="contactus.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
+                    
+                    
+                        <a class="nav-item nav-link" href="about.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
+                    
+                        <form class="header-search">
+                                <input class="input" placeholder="  Search here">
+                                <button class="search-btn">Search</button>
+                        </form>
+                       
+                    
+                </ul>
+                <!-- <div class="circleBehind blue" id="navbarSupportedContent"></div> </div> -->
+                
+                <ul class="navbar navbar-nav navbar-right">
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-user-circle-o"></span><strong> Hello User </strong>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                        <a class="dropdown-item" href="sellerDashboard.html">Dashboard</a>
+                                     
+                                        <a class="dropdown-item" href="index.html">Logout</a>
+                                </div>
+                        </li>
         
-        
-            <a class="nav-item nav-link" href="index.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
-        
-       
-            <a class="nav-item nav-link" href="contactus.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
-        
-        
-            <a class="nav-item nav-link" href="about.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
-        
-            <form class="header-search">
-                    <input class="input" placeholder="  Search here">
-                    <button class="search-btn">Search</button>
-            </form>
-           
-        
-    </ul>
-    <!-- <div class="circleBehind blue" id="navbarSupportedContent"></div> </div> -->
-    
-    <ul class="navbar navbar-nav navbar-right">
-            <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="fa fa-user-plus"></span><strong> SignUp</strong>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
-                            <a class="dropdown-item" href="signup.html">User SignUp</a>
-                         
-                            <a class="dropdown-item" href="sellersignup.html">Seller SignUp</a>
-                    </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-sign-in"></span><strong> Login</strong>
-                        </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
-                                    <a class="dropdown-item" href="login.html">User Login</a>
-                                    <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
-                            </div>
-            </li>  
-    </ul> 
-    
-</div>
-
+                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-shopping-cart"></span><strong>Cart</strong>
+                                    </a>
+                                        <!-- <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                                <a class="dropdown-item" href="login.html">User Login</a>
+                                                <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
+                                        </div> -->
+                        </li>  
+                </ul>
+                
+        </div>
+          
 </nav>
 
         <div class="container">
@@ -85,48 +90,48 @@
               <div class="col-md-3 col-sm-3 col-xs-3"></div>
               <div class="col-md-6 col-sm-6 col-xs-12" >
                   <br><br>
-                <h2 class="AddAddress">Add a new Address</h2>
+                <h2 class="AddAddress">Enter your Shipping Details</h2>
                    <br><br>
-            <form class="form-container">
+            <form class="form-container" ng-controller="shipadd">
                 <br>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
-                    <label for="exampleInputUsername required">Full Name</label>
-                    <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder=" Name" required>
+                    <label for="exampleInputUsername required">Name</label>
+                    <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="User Name" placeholder=" Name" required ng-model="name">
                 </div>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputEmail1 required">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required ng-model="email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-                <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
+                <!-- <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Atleast 6 characters" required>
-                </div>
+                </div> -->
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">Phone No</label>
-                    <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="10-digit mobile number without prefixes" required>
+                    <input type="text" class="form-control" id="examplephoneno" aria-describedby="Phone No" placeholder="10-digit mobile number without prefixes" required ng-model="mobile">
                     <small class="form-text text-muted">May be used to assist delivery.</small>
                 </div>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputpincode required">Pincode</label>
-                    <input type="text" class="form-control" id="examplepincode" aria-describedby="Pincode" placeholder="6 digits[0-9] pincode" required>
+                    <input type="text" class="form-control" id="examplepincode" aria-describedby="Pincode" placeholder="6 digits[0-9] pincode" required ng-model="pincode">
                     <small class="form-text text-muted">May be used to assist delivery.</small>
                 </div>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputAddress required">Street Address</label>
-                    <input type="text" class="form-control" id="examplepAddress" aria-describedby="Address" placeholder="Flat / House NO / Floor / Building" required><br>
-                    <input type="text" class="form-control" id="examplepAddress" aria-describedby="Address" placeholder="Colony / Street / Locality" required>
+                    <input type="text" class="form-control" id="examplepAddress" aria-describedby="Address" placeholder="Flat / House NO / Floor / Building" required ng-model="houseno"><br>
+                    <input type="text" class="form-control" id="examplepAddress" aria-describedby="Address" placeholder="Colony / Street / Locality" required ng-model="locality">
                 </div>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">Landmark</label>
-                    <input type="text" class="form-control" id="exampleLandmark" aria-describedby="Landmark" placeholder="E.g near Apollo Hospital, etc" required>
+                    <input type="text" class="form-control" id="exampleLandmark" aria-describedby="Landmark" placeholder="E.g near Apollo Hospital, etc" required ng-model="landmark">
                 </div>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
                     <label for="exampleInputUsername required">City</label>
-                    <input type="text" class="form-control" id="exampleCity" aria-describedby="City" placeholder="City" required>
+                    <input type="text" class="form-control" id="exampleCity" aria-describedby="City" placeholder="City" required ng-model="city">
                 </div>
                 <div class="form-group col-xs-offset-4 col-md-10 col-xs-6">
-                    <label for="exampleInputUsername required">State</label><br>
+                    <label for="exampleInputUsername" required ng-model="state">State</label><br>
                     <select>
                         <option value="Karnataka">Karnataka</option>
                         <option value="Kerala">Kerala</option>
@@ -158,7 +163,7 @@
                         <option value="Mizoram">Mizoram</option>
                     </select>
                 </div>
-                <div class="wrapper"><button type="submit" class="button btn btn-primary">Submit</button>
+                <div class="wrapper"><button type="submit" class="button btn btn-primary" ng-click="submit()">Submit</button>
                     <br>
                  </div>
                    

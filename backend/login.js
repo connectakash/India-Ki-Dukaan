@@ -9,14 +9,16 @@ app.controller('userlogin',function($scope,$http,$window){
                     "UserEmail":$scope.email,
                     "UserPassword":$scope.password
                 };
-                $http.post("http://localhost:3000/login",value).then(function(response){
+                $http.post("http://localhost:3000/userlogin",value).then(function(response){
                     console.log(response.data.msg);
                     if(response.data.msg == "success")
                     {
                         console.log("Redirect");
-                        $window.location.href="/userDashboard.html";
+                        alert("Login Successful");
+                        $window.location.href="/index.html";
                     }
                     else{
+                        alert("Invalid Email or Password");
                         $scope.value="Email or Password Incorrect";
                     }
                 });
