@@ -21,9 +21,11 @@ app.controller('shipadd',function($scope,$http){
 
             };
             console.log(data);
+            alert("Product Purchased");
             $http.post("http://localhost:3000/shipdetails",data).then(function(response){
                 console.log("data request sent");
             });
+            $windows.location.href="thankyou.html"
         }
         else
         {
