@@ -39,65 +39,75 @@
 </head>
 <body ng-app="myApp">
 
-        <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="indexl.html"><img src="./images/logo/logo.png" width="150" height="100" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                         </button>  
-                        
-             <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
-                
-                <ul class="navbar navbar-nav" >
-                   
-                        <a class="nav-item nav-link" href="indexl.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
-                    
-                    
-                        <a class="nav-item nav-link" href="indexl.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
-                    
-                   
-                        <a class="nav-item nav-link" href="contactusl.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
-                    
-                    
-                        <a class="nav-item nav-link" href="aboutUsl.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
-                    
-                        <form class="header-search">
-                                <input class="input" placeholder="  Search here">
-                                <button class="search-btn">Search</button>
-                        </form>
-                       
-                    
-                </ul>
-                <!-- <div class="circleBehind blue" id="navbarSupportedContent"></div> </div> -->
-                
-                <ul class="navbar navbar-nav navbar-right">
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="fa fa-user-circle-o"></span><strong> Hello User </strong>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
-                                        <a class="dropdown-item" href="sellerDashboard.html">Dashboard</a>
-                                     
-                                        <a class="dropdown-item" href="index.html">Logout</a>
-                                </div>
-                        </li>
+        <!--Nav Bar when not logged in-->
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="index.html"><img src="./images/logo/logo.png" width="150" height="100" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+             </button>  
+            
+ <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
+    
+    <ul class="navbar navbar-nav" >
+       
+            <a class="nav-item nav-link" href="index.html"  id="navbarSupportedContent" role="button"><strong>Home</strong> </a>
         
-                        <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="fa fa-shopping-cart"></span><strong>Cart</strong>
-                                    </a>
-                                        <!-- <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
-                                                <a class="dropdown-item" href="login.html">User Login</a>
-                                                <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
-                                        </div> -->
-                        </li>  
-                </ul>
-                
-        </div>
-          
+        
+            <a class="nav-item nav-link" href="index.html#categories"  id="navbarSupportedContent" role="button"><strong>Categories</strong></a>
+        
+       
+            <a class="nav-item nav-link" href="contactus.html"  id="navbarSupportedContent" role="button"><strong>Contact Us</strong></a>
+        
+        
+            <a class="nav-item nav-link" href="aboutUs.html"  id="navbarSupportedContent" role="button"><strong>About Us</strong></a>
+        
+            <form class="header-search">
+                    <input class="input" placeholder="  Search here">
+                    <button class="search-btn">Search</button>
+            </form>
+           
+        
+    </ul>
+    <!-- <div class="circleBehind blue" id="navbarSupportedContent"></div> </div> -->
+    
+    <ul class="navbar navbar-nav navbar-right">
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-user-plus"></span><strong> SignUp</strong>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                            <a class="dropdown-item" href="signup.html">User SignUp</a>
+                         
+                            <a class="dropdown-item" href="sellersignup.html">Seller SignUp</a>
+                    </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-sign-in"></span><strong> Login</strong>
+                        </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                    <a class="dropdown-item" href="login.html">User Login</a>
+                                    <a class="dropdown-item" href="SellerLogin.html">Seller Login</a>
+                            </div>
+            </li>  
+            <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-sign-in"></span><strong> Dashboard</strong>
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                                <a class="dropdown-item" href="userDashBoard.html">User Dashboard</a>
+                                <a class="dropdown-item" href="sellerDashboard.html">Seller Dashboard</a>
+                        </div>
+        </li> -->
+    </ul> 
+    
+</div>
+
 </nav>
 
     <div class="container">
