@@ -27,7 +27,6 @@ let transporter = nodemailer.createTransport({
 mongoose.connect('mongodb://admin:admin123@ds129541.mlab.com:29541/india-ki-dukaan');
 //Product Scheme
 let ProductSchema = new mongoose.Schema({
-    
     "ProductName":String,
     "ProductCategory":String,
     "AboutProduct":String,
@@ -41,23 +40,21 @@ let ProductSchema = new mongoose.Schema({
 });
 //Seller SignUp Schema
 let SellerSignupSchema = new mongoose.Schema({
-    "UserName":String,
-    "Email":String,
+    "_id":String,
+    "UserName":String, 
     "Password":String,
     "DOB":Date,
     "PhoneNo":Number,
     "State":String,
     "Address":String
-
 });
 //User SignUp Schema
 let UserSignupSchema = new mongoose.Schema({
+    "_id":String,
     "UserName":String,
-    "Email":String,
     "Password":String,
     "PhoneNo":Number,
     "Address":String
-
 });
 //Shipping Details
 let ShippingDetailsSchema = new mongoose.Schema({
@@ -109,16 +106,24 @@ app.post("/add",bp,function(req,res){
 let SellerSignUpModel = new mongoose.model("SellerSignUp",SellerSignupSchema);
 app.post("/sellersignup",bp,function(req,res){
     console.log(req.body);
-    SellerSignUpModel(req.body).save(function(err,data){
+    SellerSignUpModel(req.body).save(function(err,result){
         if(err)
         {
             console.log(err);
+            let data= {
+                msg:"duplicate"
+            }
+            res.json(data);
         }
-            if(data)
+            if(result)
             {
+                let data= {
+                    msg:"success"
+                }
+                res.json(data);
                 let mailOptions = {
                     from:"info@indiakidukaan.in",
-                    to:req.body.Email,
+                    to:req.body._id,
                     subject:"Welcome",
                     text:"Thank You for registering on India ki Dukaan, Now your allowed to add your Products on our Website and Sell them to customers. For any queries contant indiakidukaan@gmail.com"
                 };
@@ -148,7 +153,7 @@ app.post("/usersignup",bp,function(req,res){
             {
                 let mailOptions = {
                     from:"info@indiakidukaan.in",
-                    to:req.body.Email,
+                    to:req.body._id,
                     subject:"Welcome",
                     text:"Thank You for registering on India ki Dukaan, Now enjoy shopping indian products"
                 };
@@ -246,7 +251,7 @@ app.get("/productdesc",function(req,res){
 
 //retriving userlogin data from database
 app.post("/userlogin",bp,function(req,res){
-    UserSignUpModel.find({"Email":req.body.Email,"Password":req.body.Password},function(err,data){
+    UserSignUpModel.find({"_id":req.body._id,"Password":req.body.Password},function(err,data){
         if(data.length == 0)
         {
             console.log("invalid");
@@ -257,11 +262,11 @@ app.post("/userlogin",bp,function(req,res){
         }
         else
         {
-            let data = {
-                "msg":"success"
-
-            };
             res.json(data);
+            app.post("/userprofile",bp,function(req,res){
+                console.log(data);
+                res.json(data);
+            });
         }
     });
 });
@@ -272,7 +277,7 @@ app.post("/userlogin",bp,function(req,res){
 // });
 //retriving sellerlogin data from database
 app.post("/selllogin",bp,function(req,res){
-    SellerSignUpModel.find({"Email":req.body.Email,"Password":req.body.Password},function(err,data){
+    SellerSignUpModel.find({"_id":req.body._id,"Password":req.body.Password},function(err,data){
         if(data.length == 0)
         {
             console.log("invalid");
@@ -283,11 +288,11 @@ app.post("/selllogin",bp,function(req,res){
         }
         else
         {
-            let data = {
-                "msg":"success"
-
-            };
             res.json(data);
+            app.post("/profile",bp,function(req,res){
+                console.log(data);
+                res.json(data);
+            });
         }
     });
 });

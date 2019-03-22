@@ -6,21 +6,22 @@ app.controller('sellerlogin',function($scope,$http,$window){
             {
                 console.log("Data Received");
                 let value={
-                    "Email":$scope.email,
+                    "_id":$scope.email,
                     "Password":$scope.password
                 };
                 $http.post("http://localhost:3000/selllogin",value).then(function(response){
-                    console.log(response.data.msg);
-                    if(response.data.msg == "success")
+
+                    if(response.data.msg == "invalid")
                     {
-                        console.log("Redirect");
-                        alert("Login Successful");
-                        $window.location.href="/sellerDashboard.html";
-                    }
-                    else{
                         alert("Invalid Email or Password");
                         $scope.value="Email or Password Incorrect";
                     }
+                    else{
+                        console.log("Redirect");
+                        alert("Login Successful");
+                        $window.location.href="./sellerDashboard.html";
+                    }
+
                 });
             }
     }
