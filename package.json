@@ -27,7 +27,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "http": "0.0.0",
-    "mongoose": "^5.4.11",
+    "mongoose": "^5.7.5",
     "nodemailer": "^5.1.1"
   }
 }
